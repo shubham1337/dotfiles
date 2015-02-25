@@ -1,0 +1,95 @@
+[
+    { 
+        "lectures": [
+    {
+        "lid": 827,
+        "title": "Introduction - The Process of Programming",
+        "vurl": "http://youtu.be/XpugX0ypBfA",
+        "vidlen": "10:07",
+        "deliveredDate": "2014-05-17T11:45:00.000Z",
+        "resources": "public://Introduction to Computing.pptx, public://Introduction to Computing.pptx, public://Introduction to Computing.pptx"
+    },
+    {
+        "lid": 828,
+        "title": "GCD Algorithm",
+        "vurl": "http://youtu.be/HwZ3l1tszsY",
+        "vidlen": "15:33",
+        "deliveredDate": "2014-05-17T11:45:00.000Z",
+        "resources": "public://GCD Algorithm.pptx"
+    },
+    {
+        "lid": 829,
+        "title": "The Programming Cycle",
+        "vurl": "http://youtu.be/Ebc_ZpdYw_o",
+        "vidlen": "12:43",
+        "deliveredDate": "2014-05-17T11:45:00.000Z",
+        "resources": "public://The Programming Cycle.pptx"
+    }],
+        "forums": [
+    {
+        "tid": 853,
+        "topic": "programming",
+        "updatedOn": 1400594641,
+        "numPosts": 2,
+        "description": "<p>Sir, I have understood the concept what sir taught in the video lecture,but still I am not able to write the programme yet. Please help me.</p>\r\n\r\n<p>&nbsp;</p>\r\n",
+        "createdOn": 1400594641,
+        "authorName": "gagrawal@iitk.ac.in",
+        "authorAvatar": "public://pictures/picture-507-1400564912.jpg",
+        "authorId": 507
+    },
+    {
+        "tid": 1164,
+        "topic": "switch file",
+        "updatedOn": 1401649796,
+        "numPosts": 0,
+        "description": "<p>Sir, I couldn't find switch file please help me for finding switch file.</p>\r\n",
+        "createdOn": 1401649796,
+        "authorName": "gagrawal@iitk.ac.in",
+        "authorAvatar": "public://pictures/picture-507-1400564912.jpg",
+        "authorId": 507
+    }
+        ],
+        "wikis": [
+    {
+        "nid": 47,
+        "title": "finding gcd using divisors method",
+        "uid": 1,
+        "created": 1388139235,
+        "body_value": "<p><u><em><strong>&nbsp;\"Method for computing GCD for two numbers\"</strong></em></u></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<ul>\r\n\t<li>Firstly ,we will start the program and input &nbsp;two numbers m &amp; n and make them their half of that numbers.</li>\r\n\t<li>Then , we have P=m/2 &amp; R=n/2</li>\r\n\t<li>after that, In dession box--&gt; Is R&lt;P, if it is yes then , In another dession box we have --&gt; Is m%R=0 and n%R=0 if it is yes then its will print GCD (R) and then stop the program</li>\r\n</ul>\r\n\r\n<p><br />\r\nSome properties of gcd.<br />\r\n1. gcd(a, b) = gcd(b, a). It is a commutative function.<br />\r\n2. gcd(a, b) = gcd(a, b - a).<br />\r\n3. By applying condition 2, we can prove that gcd(a, b) = gcd(a, b % a).<br />\r\nThe above two definition give us a way of computing gcd recursively.&nbsp;</p>\r\n",
+        "name": "admin"
+    },
+    {
+        "nid": 842,
+        "title": "GCD Algorithms",
+        "uid": 461,
+        "created": 1400564948,
+        "body_value": "<p>Find the prime factors of first number and second number</p>\r\n\r\n<p>Find the Common prime divisors&nbsp;</p>\r\n\r\n<p>if only one prime number is &nbsp;common then the common number is the G.C.D of two numbers</p>\r\n\r\n<p>if two or more &nbsp;then multiply them and answer is the G.C.D of two numbers</p>\r\n",
+        "name": "tvprabhakar"
+    },
+    {
+        "nid": 844,
+        "title": "GCD : DIVISION BY PRIMES",
+        "uid": 534,
+        "created": 1400567105,
+        "body_value": "<p>First divde the given two numbers by the smallest prime that can divide of them.Continue the process until we can't find any prime number that can divide two numbers.</p>\r\n\r\n<p>eg: Let us take 24 and 60 and fine out the GCD of them.</p>\r\n\r\n<p>Divide 24 and 60 by smallest prime number i.e 2 we get 12 and 30 then again divide by 2 we get 6 and 15 now divide by 3 we get 2 and 5.Now we don't have any smallest prime number which can divide 2 and 5.</p>\r\n\r\n<p>Therefore, the GCD of 24 and 60 is 12</p>\r\n\r\n<p>2/(24,60)</p>\r\n\r\n<p>2/(12,30)</p>\r\n\r\n<p>3/(6,15)</p>\r\n\r\n<p>/(2,5)</p>\r\n\r\n<p>The GCD is 2*2*3=12</p>\r\n",
+        "name": "deepakbh@iitk.ac.in"
+    },
+    {
+        "nid": 845,
+        "title": "finding gcd",
+        "uid": 512,
+        "created": 1400567840,
+        "body_value": "<p>let two numbers which we have to find gcd, a,b respectively;</p>\r\n\r\n<p>now &nbsp; a*b= &nbsp;LCM(a,b)*gcd(a,b);</p>\r\n\r\n<p>so gcd(a,b)=((a*b))/LCM(a,b)</p>\r\n\r\n<p>LCM=least common multiplier;</p>\r\n\r\n<p>now to find LCM(a,b);</p>\r\n\r\n<p>write a=product of prime no. let say x*y*z</p>\r\n\r\n<p>and b=product of prime no.let say x*p*r</p>\r\n\r\n<p>then LCM(a,b)=x*y*z*p*r</p>\r\n",
+        "name": "kislay"
+    },
+    {
+        "nid": 847,
+        "title": "gcd using divisor method ",
+        "uid": 533,
+        "created": 1400578795,
+        "body_value": "<p>step 1 - given two number a, b . find which of the two number is bigger .The number which is greater is dividend and the smaller number divisor.</p>\r\n\r\n<p>step 2 - dividend = divisor * quotient + remainder</p>\r\n\r\n<p>{ ( greater number&nbsp; % smaller number = remainder) &amp; (greater number/smaller number=quotient) }</p>\r\n\r\n<p>step 3 - keep the divisor of step 2 as the dividend and remainder of step 2 as the divisor in step 3</p>\r\n\r\n<p>step 4- continue from step 2 and step 3 until remainder '0' (zero) is obtained.</p>\r\n\r\n<p>like if a=20 and b=45</p>\r\n\r\n<p>b&gt;a then 'b' dividend and 'a' divisor</p>\r\n\r\n<p>&gt;&gt;45=20*2+5</p>\r\n\r\n<p>&gt;&gt;20=5*4+0</p>\r\n\r\n<p>&gt;&gt;hence obtained zero remainder and divisor 5</p>\r\n\r\n<p>&gt;&gt; hence 5 is the gcd of 20 and 45</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>step 5 - divisor when the remainder is '0' (zero ) is the GCD of the given number a,b.</p>\r\n\r\n<p>&nbsp;</p>\r\n",
+        "name": "rishabhv@iitk.ac.in"
+    }
+        ]
+    }
+]

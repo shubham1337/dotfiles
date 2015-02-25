@@ -1,0 +1,45 @@
+HTML:
+<div class="courseTitleTopBox">
+	<div class="overlayDiv"></div>
+	<div class="courseIconBox"><img src="icons/moocONmooc-01.png"/></div>
+	<div class="courseTitleAndDescriptionBox">
+		<div class="courseTitle">
+			MOOC on MOOCs	
+		</div>
+		<div class="courseDescription">
+			What you need to know about MOOCs!
+		</div>
+	</div>
+</div>		
+
+One line change:
+<div class="loginButton moveLoginButton">
+
+<div class="signUpButton moveSignUpButton">
+
+CSS:
+.courseTitleTopBox
+{
+	width: 1000px;
+	padding: 6px;
+	border-bottom: solid;
+	border-width: 10px;
+	border-color: #E8DDCB;
+	background-color: #ffffff;
+	color: #64908a;
+	display: inline-block;
+	position: fixed;
+	top: 0px;
+	left: calc((100% - 1000px)/2);
+	z-index: 2;
+}
+
+div.moveLoginButton
+{
+	left: 57%;
+}
+
+div.moveSignUpButton
+{
+	left: 73%;
+}

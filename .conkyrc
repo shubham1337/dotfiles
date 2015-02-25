@@ -1,0 +1,75 @@
+out_to_x no
+own_window no
+out_to_console yes
+background no
+max_text_width 0
+
+# Update interval in seconds
+update_interval 2.0
+
+# This is the number of times Conky will update before quitting.
+# Set to zero to run forever.
+total_run_times 0
+
+# Shortens units to a single character (kiB->k, GiB->G, etc.). Default is off.
+short_units yes
+
+# How strict should if_up be when testing an interface for being up?
+# The value is one of up, link or address, to check for the interface
+# being solely up, being up and having link or being up, having link
+# and an assigned IP address. 
+if_up_strictness address
+
+# Add spaces to keep things from moving about?  This only affects certain objects.
+# use_spacer should have an argument of left, right, or none
+use_spacer left
+
+# Force UTF8? note that UTF8 support required XFT
+override_utf8_locale no
+
+# number of cpu samples to average
+# set to 1 to disable averaging
+cpu_avg_samples 2
+
+# Stuff after 'TEXT' will be formatted on screen
+TEXT
+
+# JSON for i3bar
+
+[{ 
+	"full_text" : "Home ${fs_free /home} Free" , 
+	"color" : "\#ffffff" 
+},
+{
+	"full_text" : "Down: ${downspeedf wlo1} KB/s",
+	"color" : ${if_match ${downspeedf wlo1}<64}"\#71b9f8"${else}"\#cf6a4c"${endif} 
+},
+{
+	"full_text" : "CPU: ${cpu}%",
+	"color" : ${if_match ${cpu}<50}"\#99ad6a"${else}"\#cf6a4c"${endif} 
+},
+{
+	"full_text" : "BAT0: ${battery_short}",
+	"color" : ${if_match ${battery_percent}>20}"\#99ad6a"${else}"\#cf6a4c"${endif} 
+},
+{
+	"full_text" : "eno1: ${addr eno1}",
+	"color" : ${if_match ${addr eno1}=="No Address"}"\#597bc5"${else}"\#cf6a4c"${endif} 
+},
+{
+	"full_text" : "wlo1: ${addr wlo1}",
+	"color" : ${if_match ${addr wlo1}=="No Address"}"\#597bc5"${else}"\#cf6a4c"${endif} 
+},
+{
+	"full_text" : "Temp: ${acpitemp}",
+	"color" : ${if_match ${acpitemp}<50}"\#597bc5"${else}"\#cf6a4c"${endif} 
+},
+{ 
+	"full_text" : "RAM ${memperc}%" , 
+	"color" : ${if_match ${memperc}<50}"\#99ad6a"${else}"\#cf6a4c"${endif} 
+},
+{
+	"full_text" : "${time} ",
+	"color" : "\#ffb964" 
+}
+],

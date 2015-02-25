@@ -1,0 +1,6 @@
+nnoremap <C-h> :tabprevious<cr>
+nnoremap <C-l> :tabnext<cr>
+
+inoremap jk <esc>
+
+set nohlsearch

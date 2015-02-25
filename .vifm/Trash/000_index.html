@@ -1,0 +1,1329 @@
+<!-- <!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Talim - IITK</title>
+
+		<!-- This is for responsiveness -->
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="HandheldFriendly" content="true">
+
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/style.css">
+
+		<!-- This is for font-family: 'Lato' -->
+		<link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/quill.snow.css">
+		<link rel="stylesheet" href="css/calendar.css">
+		<link rel="stylesheet" href="css/jquery-ui.css">
+	</head>
+
+	<body>
+		<!-- applicationTemplate -->
+		<script type="text/x-handlebars">
+			{{outlet}}
+		</script>
+
+		<!-- loginTemplate -->
+		<script type="text/x-handlebars" id="login">
+			<img class="loginPageLogo" src="icons/talimLogoBig@2X-01.png" />
+			<div class="overlayDiv"></div>
+			<div class="loginButton">
+				<span class="insideText">Login</span>
+				<div class="morphBox">
+					<div class="xMorphButton"><img src="icons/OverlayExitIcon@2X.png" /></div>
+					<div class="morphForm">
+						<label>Username</label>
+						{{input type="text" value=username}}
+						<label>Password</label>
+						{{input type="password" value=password}}
+					</div>
+					<div class="morphFormButton" {{action "login"}}>Login</div>
+				</div>
+			</div>
+			<div class="signUpButton">
+
+				<span class="insideText">Sign Up</span>
+				<div class="morphBox">
+					<div class="xMorphButton"><img src="icons/OverlayExitIcon@2X.png" /></div>
+					<div class="morphForm">
+					{{#if registerPage1}}
+						<label>E-mail</label>
+						{{input type="text" value=signupEmail}}
+						<span>{{errorLine1}}</span>
+						
+						<label>Username</label>
+						{{input type="text" value=signupUsername}}
+						<span>{{errorLine2}}</span>
+						
+						<label>Password</label>
+						{{input type="password" value=signupPassword}}
+						<span>{{errorLine3}}</span>
+						
+						<label>Confirm Password</label>
+						{{input type="password" value=signupConfirmPassword}}
+						<span>{{errorLine4}}</span>
+						
+					{{else}}
+					
+					    <label>Full Name</label>
+						{{input type="text" value=signupFullname}}
+						<span>dfsdsfdsfdsf{{errorLine1}}</span>
+						
+						<label>Gender</label>
+						<select name="signupGender" id="signupGender">
+                            <option value="">Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+							<option value="Other">Other</option>
+                        </select>
+						<span>{{errorLine2}}</span>
+						
+						<label>Age</label>
+						<select name="signupGender" id="signupGender">
+                            <option value="">Select Age</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+							<option value="3">3</option>
+                        </select>
+						<span>{{errorLine3}}</span>
+						
+						<label>Affiliation</label>
+						<select name="signupAffiliation" id="signupAffiliation">
+                            <option value="">Select Affiliation</option>
+                            <option value="academia">Academia</option>
+                            <option value="individual">Individual</option>
+							<option value="community organization">Community organization</option>
+							<option value="for-profit organization">For-profit organization</option>
+							<option value="non-profit organization">Non-profit organization</option>
+                        </select>
+						<span>{{errorLine4}}</span>
+						
+						<label>Country</label>
+						<input type="text" id="signupCountry" name="signupCountry"/>
+						<span>{{errorLine5}}</span>
+					{{/if}}
+					</div>
+					<div class="morphFormButton" {{action "signUp"}}>{{#if registerPage1}}Sign Up{{else}}Done{{/if}}</div>
+				</div>
+			</div>
+
+			<div class="coursesOnOfferBox">
+				 Courses on Offer
+				<img class="coursesOnOfferButton" src="icons/LoginPageDownArrow@2X-01.png" />
+				
+			</div>
+
+			<div class="allCoursesBox">
+				<div class="singleCourseBox">
+					<img class="courseImage" src="icons/CourseImage-01.png" />
+					<div class="courseInfoBox">
+						ESC 101:
+						<br />
+						Fundamentals of Computing
+						<br />
+						<br />
+						<span class="smallText">
+							Prof. T. V. Prabhakar
+						</span>
+					</div>
+				</div>
+				<div class="singleCourseBox">
+					<img class="courseImage" src="icons/CourseImage-01.png" />
+					<div class="courseInfoBox">
+						ESC 101:
+						<br />
+						Fundamentals of Computing
+						<br />
+						<br />
+						<span class="smallText">
+							Prof. T. V. Prabhakar
+						</span>
+					</div>
+				</div>
+				<div class="singleCourseBox">
+					<img class="courseImage" src="icons/CourseImage-01.png" />
+					<div class="courseInfoBox">
+						ESC 101:
+						<br />
+						Fundamentals of Computing
+						<br />
+						<br />
+						<span class="smallText">
+							Prof. T. V. Prabhakar
+						</span>
+					</div>
+				</div>
+				<div class="singleCourseBox">
+					<img class="courseImage" src="icons/CourseImage-01.png" />
+					<div class="courseInfoBox">
+						ESC 101:
+						<br />
+						Fundamentals of Computing
+						<br />
+						<br />
+						<span class="smallText">
+							Prof. T. V. Prabhakar
+						</span>
+					</div>
+				</div>
+			</div>
+		</script>
+
+		<!-- contentTemplate -->
+		<script type="text/x-handlebars" id="content">
+			<div class="overlayDiv"></div>
+			<div id="topNavBar">
+				<ul>
+					<li>
+						<a href="#/">
+							<img src="icons/talimLogo.png" alt="Logo">
+						</a>
+					</li>
+					{{top-links value="home"}}
+					{{top-links value="calendar"}}
+					{{top-links value="feedback"}}
+					<li class="topLinks"> 
+						{{#link-to 'profile' userId}}
+							<div class="linkBox">
+								<span>
+									{{topIcons 'profile'}}
+								</span>
+							</div>
+						{{/link-to}}
+					</li>	
+				</ul>
+
+				<div id="logoutButton" style="position: absolute; top: 0px;" {{action "logout"}} >LOG OUT</div>
+			</div>
+
+			<div id="bigContainer">
+				<div id="sideMenuBar">
+					<div id="sideMenuScroller">
+						<div id="searchBox">
+							<img id="searchBoxBackgroundImage" src="icons/SearchBoxBG@2X.png" />
+							{{input action="searchMe" id="searchBoxText" type="text" value=searchQuery placeholder="Search"}}
+							<img id="searchBoxIcon" src="icons/SearchIcon@2X.png" {{action 'searchMe'}} />
+						</div>
+						<ul>
+							{{side-links-one value="lectures"}}
+							{{side-links-one value="assignments"}}
+							{{side-links-one value="quizzes"}}
+							{{side-links-one value="projects"}}
+							<br />
+							{{side-links-two value="syllabus"}}
+							{{side-links-two value="schedule"}}
+							{{side-links-two value="events"}}
+							{{side-links-two value="announcements"}}
+							<br />
+							{{side-links-three value="forums"}}
+							{{side-links-three value="chat"}}
+							{{side-links-three value="wikis"}}
+							{{side-links-three value="resources"}}
+							<br />
+						</ul>
+					</div>
+				</div>
+				
+				<div id="container">
+					<div id="containerTopPaddingBox"></div>
+					{{container-header first="ESC101" second="Fundamentals of Computing"}}
+					{{outlet}}
+				</div>
+			</div>
+		</script>
+
+		<!--Top Menu Bar Starts from here-->
+
+		<!-- homeTemplate -->
+		<script type="text/x-handlebars" id="home">
+			{{container-lower-header first="Home" value='home' isSummaryPage=true}}
+			<div class="latestLectures">
+				<span>Latest Lectures</span>
+				<br />
+				<div class="containerSummary">
+					{{container-summary-head first="Lecture Title" second="Video Duration" third="Resources"}}
+					<ul class="lectureSummary">
+						{{#each model}}
+							{{lecture-container-item link=this openResourceDialogBox="openResourceDialogBox" isContainerItem=true}}
+						{{/each}}
+					</ul>
+				</div>
+			</div>
+			{{partial "lectureMiscDialogBox"}}
+			<div class="updatedForums">
+				<span>Recently Updated Forums</span>
+				<br />
+				<div class="containerSummary">
+				{{container-summary-head first="Topic" second="Updated On" third="No of Posts"}}
+				<ul class="containerSummaryList">
+					{{#each model.[0].forums}}
+						<li>
+							{{#link-to 'forum' this}}
+								<div class="containerItem">
+									<span>{{shortenTitle topic}}</span>
+									<span>{{numPosts}}</span>
+									<span>{{formatDateFromUnixOnlyDate updatedOn}}</span>
+								</div>
+							{{/link-to}}
+						</li>
+					{{/each}}
+				</ul>
+				</div>
+			</div>
+			<div class="createdWiki">
+				<span>Last Created Wiki</span>
+				<br />
+				<div class="containerSummary">
+				{{container-summary-head first="Title" second="Author"}}
+				<ul class="containerSummaryList">
+					{{#each model.[0].wikis}}
+						{{container-item first=title second=name value="wiki" link=this}}
+					{{/each}}
+				</ul>
+				</div>
+			</div>
+		</script>
+
+		<!-- calendarTemplate -->
+		<script type="text/x-handlebars" id="calendar">
+			{{container-lower-header first="Calendar" value='calendar' isSummaryPage=true}}
+			<div id="calendar" class="fc-calendar-container"></div>
+		</script>
+
+		<!-- feedbackTemplate -->
+		<script type="text/x-handlebars" id="feedback">
+			<p>You are in feedback section</p>
+		</script>
+
+		<!-- profileTemplate -->
+		<script type="text/x-handlebars" id="profile">
+			<ul class="containerLowerHeader">
+				<li class='containerLowerHeaderSummaryPage'>
+					User Profile
+				</li>
+				<li>
+					{{#link-to 'profileedit'}}
+						<div class="wikiEditButton">
+							Edit
+						</div>
+					{{/link-to}}
+				</li>
+			</ul>		
+			<div class="userPicLarge">
+				{{getAvatar data.avatar}}
+			</div>
+			<div class="userInfoBox">
+				<span class="userLargeUserName">{{data.username}}</span>
+				<br />
+				<span class="userProfileBlueColor">{{data.role}}</span>
+				<br />
+				Member for:
+				<span class="userProfileBlueColor">{{getTimeFromNow data.member}}</span>
+			</div>
+			<ul class="userProfileNameList">
+				<li>
+					First Name:
+					<span class="userProfileBlueColor">{{data.firstname}}</span>
+				</li>
+				<li>
+					Last Name:
+					<span class="userProfileBlueColor">{{data.lastname}}</span>
+				</li>
+				<li>
+					Roll No:
+					<span class="userProfileBlueColor">{{data.rollno}}</span>
+				</li>
+			</ul>
+			<div class="userProfileStats">
+				Stats
+				<ul class="userProfileStatsList">
+					<li>
+						Wiki Entries Made: 0
+					</li>
+					<li>
+						Comments Posted: 14
+					</li>
+					<li>
+						Forum Topics Created: 0
+					</li>
+				</ul>
+			</div>
+		</script>
+
+		<!--Side Menu Bar Pages start from here-->
+
+		<!--Lectures, Assignments, Quizzes and Projects-->
+
+		<!-- lecturesTemplate -->
+		<script type="text/x-handlebars" id="lectures">
+			{{container-lower-header first="Lectures" value='lectures' isSummaryPage=true}}
+			<ul class="lectureSummaryHead">
+				<li>S.No</li>
+				<li>Lecture Title</li>
+				<li>Resources</li>
+				<li>Video Duration</li>
+			</ul>
+			<div class="lectureSummaryBox">
+				<ul class="lectureSummaryBig">
+					{{#each getModel}}
+						{{lecture-container-item link=this openResourceDialogBox="openResourceDialogBox" isContainerItem=false}}
+					{{/each}}
+				</ul>
+			</div>
+			{{partial "lectureMiscDialogBox"}}
+
+			<!-- This will remove pagination when window width <= 615px -->
+			{{#if addPagination}}
+				{{paginationHelper totalNoOfPagesBinding=totalNoOfPages currentPageNoBinding=currentPageNo}}
+			{{/if}}
+		</script>
+
+		<!-- lectureTemplate -->
+		<script type="text/x-handlebars" id="lecture">
+			<ul class="containerLowerHeader">
+				<li>Lecture {{sno}}: {{title}}</li>
+				<li>
+					{{#if deliveredDate}}
+						{{formatDate deliveredDate}}
+					{{else}}
+						--/--/----
+					{{/if}}
+				</li>
+			</ul>
+			
+			<div class="lectureVideoBox">
+				<div class="videoElement">
+					{{getVideo this.vurl}}
+				</div>
+				<span class="lectureDuration">Duration - {{vidlen}}</span>
+			</div>
+
+			<div class="lectureResourcesBox">
+				{{splitResources modelBinding=this.content}}
+			</div>
+
+			{{partial "lectureMiscDialogBox"}}
+
+			{{#if this.nextLecture}}
+				<div class="lectureNextButton">
+					{{#link-to 'lecture' this.nextLecture}}
+						Next
+					{{/link-to}}
+				</div>
+			{{/if}}
+
+			{{#if this.prevLecture}}
+				<div class="lecturePrevButton">
+					{{#link-to 'lecture' this.prevLecture}}
+						Prev
+					{{/link-to}}
+				</div>
+			{{/if}}
+
+			<div class="lectureDiscussionBox">
+				<div class="lectureQuestionsAndComments">
+					Questions and Comments
+					<div class="commentPostButton" {{action "openPostCommentDialogBox"}} >
+						Post
+					</div>
+				</div>
+				{{partial "postCommentDialogBox"}}
+				{{#if areCommentsAvailable}}
+					{{partial "comments-section"}}
+				{{else}}
+					<span class="noComments">No Comments have been made yet.</span>
+				{{/if}}
+			</div>
+		</script>
+
+		<!-- assignmentsTemplate -->
+		<script type="text/x-handlebars" id="assignments">
+			{{container-lower-header first="Assignments" value='assignments' isSummaryPage=true}}
+			<div class="containerSummary">
+				<div class="assignmentsSummary">
+					{{container-summary-head first="Title" second="Created On" third="Due On"}}
+					<ul class="containerSummaryList">
+						{{#each model}}
+							<li>
+								{{#link-to 'assignment' this}}
+									<div class="containerItem">
+										<span>{{shortenTitle title}}</span>
+										<span>{{formatDate dueDateTime}}</span>
+										<span>{{formatDateFromUnixOnlyDate creationDateTime}}</span>
+									</div>
+								{{/link-to}}
+							</li>
+						{{/each}}
+					</ul>
+				</div>
+			</div>
+		</script>
+
+		<!-- assignmentTemplate -->
+		<script type="text/x-handlebars" id="assignment">
+			<ul class="containerLowerHeader">
+				<li>{{#link-to 'assignments'}}Assignments{{/link-to}}</li>
+				<li><b>Due : {{formatDate dueDateTime}}</b></li>
+			</ul>
+			<div class="assignmentTitleBox">
+				{{title}}{{aid}}
+			</div>
+			<div class="assignmentViewBox">
+				{{{description}}}
+			</div>
+			{{#if submittedOn}}
+				<div class="assignmentSubmitButton greyedOut">
+					Submit
+				</div>	
+			{{else}}
+				<div class="assignmentSubmitButton" {{action "toggleDialogBox"}}>
+					Submit
+				</div>
+			{{/if}}
+			{{#if showDialogBox}}
+				{{#dialog-box title="Upload your Assignment Files" closeDialogBox="toggleDialogBox"}}
+					<br />
+					<b>Question: </b>{{title}}
+					<br />
+					<br />
+					<b>Uploaded Files:</b>
+					<br />
+					{{splitPrivateResources}}
+					<br />
+					<br />
+					<b>Add files:</b>
+					<br />
+					<br />
+					{{path}}
+					<br />
+					<br />
+					<form class='fileUploadForm'>
+						<label class="assignmentChooseFileButton"> 
+							Choose File
+							{{input type="file" class="file" value=this.path}}
+						</label>
+						<div class="assignmentUploadButton">
+							Upload
+							{{input type="submit" action="upload"}}
+						</div>
+					</form>
+					</form>
+					<div class="assignmentSubmitDialogBoxButton">
+						Submit Assignment
+					</div>
+				{{/dialog-box}}
+			{{/if}}
+			<div class="assignmentDueDate">
+				Due : {{formatDate dueDateTime}}
+			</div>
+		</script>
+
+		<!-- quizzesTemplate -->
+		<script type="text/x-handlebars" id="quizzes">
+			{{container-lower-header first="Quizzes" value='quizzes' isSummaryPage=true}}
+			<div class="containerSummary">
+				{{container-summary-head first="Title" second="Created On" third="Due On"}}
+				<ul class="containerSummaryList">
+					{{#each model}}
+							<li>
+								{{#link-to 'quiz' this}}
+									<div class="containerItem">
+										<span>{{shortenTitle title}}</span>
+										<span>{{formatDateFromUnixOnlyDate created}}</span>
+										<span>{{formatDateFromUnixOnlyDate created}}</span>
+									</div>
+								{{/link-to}}
+							</li>
+					{{/each}}
+				</ul>
+			</div>
+		</script>
+
+		<!-- quizTemplate -->
+		<script type="text/x-handlebars" id="quiz">
+
+			<ul class="containerLowerHeader">
+				<li>Quiz Title</li>
+				<li><b>Max Score: 80</b></li>
+			</ul>
+
+			{{#eachIndexed question in questions}}
+
+   			{{#ifTrueFalse question}}
+             <div class="quizMultipleChoiceBox">
+				<span class="quizQuestion">
+					<b>Q.{{index_1}}</b>
+					<span>{{rawhtml question.title}}</span>
+				</span>
+				<ul class="quizMultipleChoiceOptions">
+				     {{#each obj in question.options}}
+					<li><label><input type="radio" name="Q1" />{{rawhtml obj.value}} </label></li>
+					 {{/each}}
+				</ul>
+			</div>      
+            {{/ifTrueFalse}}
+
+            {{#ifMultiChoice1 question}}
+             <div class="quizMultipleChoiceBox">
+				<span class="quizQuestion">
+					<b>Q.{{index_1}}</b>
+					<span>{{rawhtml question.title}}</span>
+				</span>
+				<ul class="quizMultipleChoiceOptions">
+				     {{#each obj in question.options}}
+					<li><label><input type="checkbox" name="Q2" />{{rawhtml obj.value}}</label></li>
+					 {{/each}}
+				</ul>
+			</div>      
+            {{/ifMultiChoice1}}
+
+                                            
+            {{#ifMultiChoice0 question}}
+            <div class="quizMultipleChoiceBox">
+				<span class="quizQuestion">
+					<b>Q.{{index_1}}</b>
+					<span>{{rawhtml question.title}}</span>
+				</span>
+				<ul class="quizMultipleChoiceOptions">
+
+				    {{#each obj in question.options}}
+					<li><label><input type="radio" name="Q3" />{{rawhtml obj.value}}</label></li>
+				    {{/each}}
+				</ul>
+			</div>
+			{{/ifMultiChoice0}}
+			
+			{{/eachIndexed}}
+			<button {{action "deleteTodo" this}}>Submit</button>
+				
+		</script>
+
+		<!-- projectsTemplate -->
+		<script type="text/x-handlebars" id="projects">
+			<p>You are in projects section</p>
+		</script>
+
+		<!--Syllabus, Schedule, Events and Announcements-->
+		
+		<!-- syllabusTemplate -->
+		<script type="text/x-handlebars" id="syllabus">
+		<div class="syllabusContainer">
+			{{#each model}}
+			<span class="syllabusTitle">{{title}}</span>
+			<span class="syllabusBody">{{{body_value}}}</span>
+			{{/each}}	
+		</div>
+		</script>
+
+
+		<!-- scheduleTemplate -->
+		<script type="text/x-handlebars" id="schedule">
+		<div class="scheduleContainer">
+			{{#each model}}
+			<span class="scheduleTitle">{{title}}</span>
+			<span class="scheduleBody">{{{body_value}}}</span>
+			<br><br>
+			<span class="scheduleBody">{{resource_title}}</span>
+			<br><br>
+			<b>File:</b><br>
+			 <table><tr><td align="center"><img src="icons/PDFIcon.png"/></td><td td align="center">{{formatURL filename}}</td></tr></table>
+			{{/each}}
+		</div>
+		</script>
+
+		<!-- eventsTemplate -->
+		<script type="text/x-handlebars" id="events">
+			{{container-lower-header first="Events" value='events' isSummaryPage=true}}
+			<ul class="eventsList">
+				{{#each model}}
+					<li>
+						{{eventsDateTime}}
+						<div class="eventBody">
+	                        <h5>
+	                            {{title}}
+	                        </h5>
+	                        <span>
+								{{{description}}}
+	                    	</span>
+	                        <hr />
+	                    </div>
+	                </li>
+				{{/each}}
+			</ul>
+		</script>
+
+		<!-- announcementsTemplate -->
+		<script type="text/x-handlebars" id="announcements">
+			{{container-lower-header first="Announcements" value='announcements' isSummaryPage=true}}
+			<div class="containerSummary">
+				{{container-summary-head first="Title" second="Date"}}
+				<ul class="containerSummaryList">
+					{{#each model}}
+						<li>
+							{{#link-to 'announcement' this}}
+								<div class="containerItem">
+									<span>{{shortenTitle title}}</span>
+									<span>{{formatDateFromUnixOnlyDate created}}</span>
+								</div>
+							{{/link-to}}
+						</li>
+					{{/each}}
+				</ul>
+			</div>
+		</script>
+
+		<!-- announcementTemplate -->
+		<script type="text/x-handlebars" id="announcement">
+			{{container-lower-header first="Announcements" value='announcements'}}
+			<div class="forumUserPic">
+				{{#link-to 'profile' this}}
+					{{getAvatar uri}}
+				{{/link-to}}
+			</div>
+			<div class="announcementBody">
+				<div class="forumUserName">
+					{{#link-to 'profile' this}}
+						<b>{{name}}</b> 
+					{{/link-to}}
+					posted:
+				</div>
+				<div class="topRightDateTime">
+					{{formatDateFromUnix created}}
+				</div>
+				<h5>{{title}}</h5>
+				<span>
+					{{{body_value}}}
+				</span>
+			</div>
+		</script>
+
+		<!--Forums, Chat, Wikis and Resources-->
+
+		<!-- forumsTemplate -->
+		<script type="text/x-handlebars" id="forums">
+			{{container-lower-header first="Forums" value='forums' isSummaryPage=true}}
+			<div class="containerSummary">
+				{{container-summary-head first="Topic" second="Updated On" third="No of Posts"}}
+				<div class="forumsSummaryBox">
+					<ul class="containerSummaryList">
+						{{#each getModel}}
+							<li>
+								{{#link-to 'forum' this}}
+									<div class="containerItem">
+										<span>{{shortenTitle topic}}</span>
+										<span>{{numPosts}}</span>
+										<span>{{formatDateFromUnixOnlyDate updatedOn}}</span>
+									</div>
+								{{/link-to}}
+							</li>
+						{{/each}}
+						<li>
+							<div class="forumsNewTopicButton" {{action "toggleDialogBox"}}>
+								New Topic
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				{{#if showDialogBox}}
+					{{#dialog-box title="Add a New Discussion Topic" closeDialogBox="toggleDialogBox"}}
+						<br />
+						Subject
+						<br />
+						{{input type="text" class="forumDialogSubjectBox" value=subject placeholder="Placeholder Text"}}
+						<br />
+						Brief Description (Summary)
+						<br />
+						<div class="quillContainer">
+							{{render "addQuill"}}
+						</div>
+						<div class="forumDialogAddButton" {{action "forumAddNewTopic"}}>Add</div>
+					{{/dialog-box}}
+				{{/if}}
+			</div>
+			
+			{{#if addPagination}}
+				{{paginationHelper totalNoOfPagesBinding=totalNoOfPages currentPageNoBinding=currentPageNo}}
+			{{/if}}
+		</script>
+
+		<!-- forumTemplate -->
+		<script type="text/x-handlebars" id="forum">
+			{{container-lower-header first="Forums" value='forums'}}
+			<div class="forumTopicBox">
+				{{#link-to 'profile' this}}
+					<div class="forumUserPic">
+						{{getAvatar authorAvatar}}
+					</div>
+				{{/link-to}}
+				<div class="forumTopicBody">
+					<div class="forumUserName">
+						{{#link-to 'profile' this}}
+							<b>{{authorName}}</b> 
+						{{/link-to}}
+						posted:
+					</div>
+					<div class="forumTopicTopic">
+						{{topic}}
+					</div>
+					<div class="topRightDateTime">
+						{{formatDateFromUnix createdOn}}
+					</div>
+					<div class="forumTopicDescription">
+						{{{description}}}
+					</div>
+					{{#if hasEditButton}}
+						<div class="commentEditButton" {{action "toggleEditForumDescriptionDialogBox"}}>Edit</div>
+					{{/if}}
+					<div class="commentReplyButton" {{action "openPostCommentDialogBox"}}>Post</div>
+				</div>
+			</div>
+
+			{{partial "editForumDescriptionDialogBox"}}
+			{{partial "postCommentDialogBox"}}
+
+			{{#if areCommentsAvailable}}
+				{{partial "comments-section"}}
+			{{else}}
+				<div class="forumNoComments">
+					<span class="noComments">
+						No Comments have been made yet.
+					</span>
+				</div>
+			{{/if}}
+		</script>
+
+		<!-- chatTemplate -->
+		<script type="text/x-handlebars" id="chat">
+			You are in Chat section.
+		</script>
+
+		<!-- wikisTemplate -->
+		<script type="text/x-handlebars" id="wikis">
+			{{container-lower-header first="Wikis" value='wikis' isSummaryPage=true}}
+			<div class="containerSummary">
+				{{container-summary-head first="Title" second="Author"}}
+				<ul class="containerSummaryList">
+					{{#each model}}
+						{{container-item first=title second=name value="wiki" link=this}}
+					{{/each}}
+				</ul>
+			</div>
+		</script>
+
+		<!-- wikiTemplate -->
+		<script type="text/x-handlebars" id="wiki">
+			<ul class="containerLowerHeader">
+				<li class='containerLowerHeaderSummaryPage'>
+					{{#link-to 'wiki'}}
+						Wikis
+					{{/link-to}}
+				</li>
+				<li>
+					{{#link-to 'wikiedit' this}}
+						<div class="wikiEditButton">
+							Edit
+						</div>
+					{{/link-to}}
+				</li>
+			</ul>		
+			<span class="wikiTitle">
+				{{title}}
+			</span>
+			<div class="wikiBody">
+				{{{body_value}}}
+			</div>
+		</script>
+
+		<!-- wikiEditTemplate -->
+		<script type="text/x-handlebars" id="wikiedit">
+			<div class="wikiEditingTopTitle">
+				Editing - {{title}}
+			</div>
+			<div class="wikiEditingForm">
+				Title*
+				<br />
+				{{input class="wikiEditingTitleBox" value=this.title}}
+				<br />
+				<br />
+				Brief Description (Summary)
+				<br />
+				<div class="quillContainerWrapper">
+					<div class="quillContainer">
+
+						{{partial "addQuillToolbar"}}
+						
+						<div class="quillEditor">
+							{{{body_value}}}
+						</div>
+					</div>
+				</div>
+				<div class="wikiEditingRevisionBox">
+					Revision Log Message
+					{{textarea}}
+				</div>
+				<div class="outerWrapperButton">
+					<div class="wikiEditingSaveChangesButton" {{action 'saveChanges'}} >
+						Save Changes
+					</div>
+				</div>
+			</div>
+		</script>
+		
+
+		<!-- resourcesTemplate -->
+		<script type="text/x-handlebars" id="resources">
+			<p>You are in resources section</p>
+		</script>
+
+		<!--Search Page-->
+		
+		<!-- searchTemplate -->
+		<script type="text/x-handlebars" id="search">
+			<ul class="containerLowerHeader">
+				<li>Search</li>
+				<li><b>Search Results for "{{searchQuery}}"</b></li>
+			</ul>
+			<div class="latestLectures">
+				<span>"{{searchQuery}}" in Lectures</span>
+				<br />
+				<div class="containerSummary">
+				{{container-summary-head first="Lecture Title" second="Video Duration" third="Resources"}}
+				<ul class="lectureSummary">
+					{{#each model.[0].lectures}}
+						{{lecture-container-item link=this openResourceDialogBox="openResourceDialogBox"  isContainerItem=true}}
+					{{/each}}
+				</ul>
+				</div>
+			</div>
+			{{partial "lectureMiscDialogBox"}}
+			<div class="updatedForums">
+				<span>"{{searchQuery}}" in Forums</span>
+				<br />
+				<div class="containerSummary">
+				{{container-summary-head first="Topic" second="Updated On" third="No of Posts"}}
+				<ul class="containerSummaryList">
+					{{#each model.[0].forums}}
+						<li>
+							{{#link-to 'forum' this}}
+								<div class="containerItem">
+									<span>{{shortenTitle topic}}</span>
+									<span>{{numPosts}}</span>
+									<span>{{formatDateFromUnixOnlyDate updatedOn}}</span>
+								</div>
+							{{/link-to}}
+						</li>
+					{{/each}}
+				</ul>
+				</div>
+			</div>
+			<div class="createdWiki">
+				<span>"{{searchQuery}}" in Wiki</span>
+				<br />
+				<div class="containerSummary">
+					{{container-summary-head first="Title" third="Author"}}
+					<ul class="containerSummaryList">
+						{{#each model.[0].wikis}}
+							{{container-item first=title third=name value="wiki" link=this}}
+						{{/each}}
+					</ul>
+				</div>
+			</div>
+		</script>
+
+
+		<!-- commentsTemplate -->
+		<script type="text/x-handlebars" data-template-name="_comments-section">
+			<div class="commentsSection">
+				<div class="shadowDiv"></div>
+				{{#each getAllComments}}
+					<div class="singleComment">
+						<div class="userPicWrapper">
+							{{#link-to 'profile' this}}
+								<div class="userPic">
+									{{getAvatar avatar}}
+								</div>
+							{{/link-to}}
+						</div>
+						<div class="commentBodyBox">
+							<div class="forumUserName">
+								{{#link-to 'profile' this}}
+									<span>{{username}}</span>
+								{{/link-to}}
+							</div>
+							<div class="topRightDateTimeComment">
+								{{formatDateFromUnix creationDateTime}}
+							</div>
+							<div class="commentText">
+								{{{text}}}
+								{{#if hasEditButton}}
+									<div class="commentEditButton" {{action "openEditCommentDialogBox" this}}>Edit</div>
+								{{/if}}
+								<div class="commentReplyButton" {{action "openReplyCommentDialogBox" this}}>Reply</div>
+							</div>
+
+							<div class="viewAllComments">
+								{{#if childComments}}
+									<span></span>
+								{{/if}}
+							</div>
+
+							{{#each childComments}}
+								<div class="innerComment">
+									<div class="userPicWrapper">
+										{{#link-to 'profile' this}}
+											<div class="userPic">
+												{{getAvatar avatar}}
+											</div>
+										{{/link-to}}
+									</div>
+									<div class="innerCommentBodyBox">
+										<div class="forumUserName">
+											{{#link-to 'profile' this}}
+												<span>{{username}}</span>
+											{{/link-to}}
+										</div>
+										<div class="topRightDateTimeComment">
+											{{formatDateFromUnix creationDateTime}}
+										</div>
+										<div class="commentText">
+											{{{text}}}
+											{{#if hasEditButton}}
+												<div class="commentEditButton" {{action "openEditCommentDialogBox" this}}>Edit</div>
+											{{/if}}
+											<div class="commentReplyButton" {{action "openReplyCommentDialogBox" this}}>Reply</div>
+										</div>
+									</div>
+								</div>
+							{{/each}}
+						</div>
+					</div>
+				{{/each}}
+			</div>
+			{{partial "replyCommentDialogBox"}}
+			{{partial "editCommentDialogBox"}}
+		</script>
+
+		<!-- lectureMiscTemplate -->
+		<script type="text/x-handlebars" data-template-name="_lectureMiscDialogBox">
+			{{#if showDialogBox}}
+				{{#dialog-box title="Available Resources" closeDialogBox="toggleDialogBox"}}
+					<br />
+					<div class="lectureDialogBoxTitle">{{resourceClicked.title}}</div>
+					<br />
+					<br />
+					{{#each resourceClicked.allLinks}}
+						<div class="lectureResourcesDialogBox">
+							<a {{bind-attr href=this.resLink}} target="_blank">
+								<img {{bind-attr src=this.resIcon}} />
+								<span>{{this.resFileName}}</span>
+							</a>
+						</div>
+					{{/each}}
+				{{/dialog-box}}
+			{{/if}}
+		</script>
+
+		<!-- replyCommentTemplate -->
+		<script type="text/x-handlebars" data-template-name="_replyCommentDialogBox">
+			{{#if showReplyCommentDialogBox}}
+				{{#dialog-box title="Add a New Comment" closeDialogBox="closeReplyCommentDialogBox"}}
+					<br />
+					<br />
+					Replying to:
+					<br />
+					<br />
+					<div class="singleCommentDialogBox">
+						<div class="userPicWrapper">
+							<div class="userPic">{{getAvatar commentClicked.avatar}}</div>
+						</div>
+						<div class="commentBodyBox">
+							<div class="forumUserName">
+								<span>{{commentClicked.username}}</span>
+							</div>
+							<div class="topRightDateTimeComment">
+								{{formatDateFromUnix commentClicked.creationDateTime}}
+							</div>
+							<div class="commentText">
+								{{{commentClicked.text}}}
+							</div>
+						</div>
+						<div class="addCommentTextBox">
+							Comment:
+							<br />
+							<div class="quillContainer">
+								{{render "addQuill"}}
+							</div>
+						</div>
+						<div class="addCommentButton" {{action "replyComment" commentClicked}}>
+							Add
+						</div>
+					</div>
+				{{/dialog-box}}
+			{{/if}}
+		</script>
+
+		<!-- postCommentTemplate -->
+		<script type="text/x-handlebars" data-template-name="_postCommentDialogBox">
+			{{#if showPostCommentDialogBox}}
+				{{#dialog-box title="Add a New Comment" closeDialogBox="closePostCommentDialogBox"}}
+					<br />
+					<div class="addCommentTextBox">
+						Comment:
+						<br />
+						<div class="quillContainer">
+							{{render "addQuill" commentClicked}}
+						</div>
+					</div>
+					<div class="addCommentButton" {{action "postComment"}}>
+						Add
+					</div>
+				{{/dialog-box}}
+			{{/if}}
+		</script>
+
+		<!-- editCommentTemplate -->
+		<script type="text/x-handlebars" data-template-name="_editCommentDialogBox">
+			{{#if showEditCommentDialogBox}}
+				{{#dialog-box title="Editing a Comment" closeDialogBox="closeEditCommentDialogBox"}}
+					<br />
+					<br />
+					<div class="singleCommentDialogBox">
+						<div class="userPicWrapper">
+							<div class="userPic">{{getAvatar commentClicked.avatar}}</div>
+						</div>
+						<div class="commentBodyBox">
+							<div class="forumUserName">
+								<span>{{commentClicked.username}}</span>
+							</div>
+							<div class="topRightDateTimeComment">
+								{{formatDateFromUnix commentClicked.creationDateTime}}
+							</div>
+							<div class="commentText">
+								{{{commentClicked.text}}}
+							</div>
+						</div>
+						<div class="addCommentTextBox">
+							Comment:
+							<br />
+							<div class="quillContainer">
+								{{render "addQuill" commentClicked}}
+							</div>
+						</div>
+						<div class="addCommentButton" {{action "editComment" commentClicked}}>
+							Edit
+						</div>
+					</div>
+				{{/dialog-box}}
+			{{/if}}
+		</script>
+
+		<!-- editForumDescriptionTemplate -->
+		<script type="text/x-handlebars" data-template-name="_editForumDescriptionDialogBox">
+			{{#if showEditForumDescriptionDialogBox}}
+				{{#dialog-box title="Editing Forum Description" closeDialogBox="toggleEditForumDescriptionDialogBox"}}
+					<br />
+					<br />
+					Editing:
+					<br />
+					<br />
+					<div class="singleCommentDialogBox">
+						<div class="userPicWrapper">
+							<div class="userPic">{{getAvatar avatar}}</div>
+						</div>
+						<div class="commentBodyBox">
+							<div class="forumUserName">
+								<span>{{authorName}}</span>
+							</div>
+							<div class="forumTopicTopic">
+								{{topic}}
+							</div>
+							<div class="topRightDateTimeComment">
+								{{formatDateFromUnix createdOn}}
+							</div>
+							<div class="commentText">
+								{{{description}}}
+							</div>
+						</div>
+						<div class="addCommentTextBox">
+							Description:
+							<br />
+							<div class="quillContainer">
+								
+								{{partial "addQuillToolbar"}}
+								
+								<div class="quillEditor">
+									{{{description}}}
+								</div>
+							</div>
+							<div class="addCommentButton" {{action "editForumDescription"}}>
+								Add
+							</div>
+						</div>
+					</div>
+				{{/dialog-box}}
+			{{/if}}
+		</script>
+
+		<!-- quillTemplate -->
+		<script type="text/x-handlebars" data-template-name="addQuill">
+
+			{{partial "addQuillToolbar"}}
+
+			<div class="quillEditor">
+				{{{this.text}}}
+			</div>
+		</script>
+
+		<script type="text/x-handlebars" data-template-name="_addQuillToolbar">
+			<div class="quillToolbar">
+				<span class="ql-format-group">
+					<span title="Bold" class="ql-format-button ql-bold"></span>
+					<span class="ql-format-separator"></span>
+					<span title="Italic" class="ql-format-button ql-italic"></span>
+					<span class="ql-format-separator"></span>
+					<span title="Underline" class="ql-format-button ql-underline"></span>
+				</span>
+			</div>
+		</script>
+
+		<!-- Component templates start here -->
+
+		<!-- componentTopLinksTemplate -->
+		<script type="text/x-handlebars" id="components/top-links">
+			{{#link-to value}}
+				<div class="linkBox">
+					<span>
+						{{topIcons value}}
+					</span>
+				</div>
+			{{/link-to}}
+		</script>
+
+		<!-- componentSideLinksTemplate -->
+		<script type="text/x-handlebars" id="components/side-links-one">
+			{{#link-to value}}
+				{{sideBox value "1"}}
+			{{/link-to}}
+		</script>
+		<script type="text/x-handlebars" id="components/side-links-two">
+			{{#link-to value}}
+				{{sideBox value "2"}}
+			{{/link-to}}
+		</script>
+		<script type="text/x-handlebars" id="components/side-links-three">
+			{{#link-to value}}
+				{{sideBox value "3"}}
+			{{/link-to}}
+		</script>
+
+		<!-- componentDialogBoxTemplate -->
+		<script type="text/x-handlebars" id="components/dialog-box">
+			<div class="largeDiv">
+				<div class="dialogContents">
+					<div class="dialogExitButton" {{action "closeDialogBox"}}>
+						<img src="icons/OverlayExitIcon@2X.png" />
+					</div>
+					<div class="dialogTitle">
+						<span>
+							{{title}}
+						</span>
+					</div>
+					<div class="dialogBody">
+						{{yield}}
+					</div>
+				</div>
+			</div>
+		</script>
+
+		<!-- componentContainerItemTemplate -->
+		<script type="text/x-handlebars" id="components/container-item">
+			{{#link-to value link}}
+				<div class="containerItem">
+					<span>{{shortenTitle first}}</span>
+					<span>{{third}}</span>
+					<span>{{second}}</span>
+				</div>
+			{{/link-to}}
+		</script>
+
+		<!-- componentContainerHeaderTemplate -->
+		<script type="text/x-handlebars" id="components/container-header">
+			<li>
+				<div class="sideMenuButton">
+					<div class="firstBar"></div>
+					<div class="secondBar"></div>
+					<div class="thirdBar"></div>
+				</div>
+			</li>
+			<li>{{first}}</li>
+			<li>{{second}}</li>
+		</script>
+
+		<!-- componentContainerHeaderLinksTemplate -->
+		<script type="text/x-handlebars" id="components/container-lower-header">
+			<li {{bind-attr class='isSummaryPage:containerLowerHeaderSummaryPage'}}>
+				{{#link-to value}}
+					{{first}}
+				{{/link-to}}
+			</li>
+			<li></li>
+		</script>
+
+		<!-- componentContainerSummaryHeadTemplate -->
+		<script type="text/x-handlebars" id="components/container-summary-head">
+			<li>{{first}}</li>
+			<li>{{third}}</li>
+			<li>{{second}}</li>
+		</script>
+
+		<!-- componentLectureContainerItemTemplate -->
+		<script type="text/x-handlebars" id="components/lecture-container-item">
+			{{#link-to 'lecture' link}}
+				{{#if isContainerItem}}
+					<div class="lectureInfoBox">
+						<div class="lectureInfoBoxText">{{shortenTitle link.title}}</div>
+						<div class="lectureInfoBoxLengthInMiddle">{{link.vidlen}}</div>
+					</div>
+				{{else}}
+					<div class="lectureInfoBox">
+						<div class="lectureInfoBoxText">{{link.sno}}</div>
+						<div class="lectureInfoBoxText">{{shortenTitle link.title}}</div>
+						<div class="lectureInfoBoxLength">{{link.vidlen}}</div>
+					</div>
+				{{/if}}
+			{{/link-to}}
+			<div class="lectureInfoBoxResources">
+				{{splitResources modelBinding=link}}
+			</div>
+		</script>
+
+
+		<!-- All Libraries -->
+		<script src="js/libs/quill.min.js"></script>
+		<script src="js/libs/moment.min.js"></script>
+		<script src="js/libs/jquery-1.11.1.min.js"></script>
+		<script src="js/libs/jquery.calendario.js"></script>
+		<script src="js/libs/jquery-ui-1.10.4.js"></script>
+		<script src="js/libs/handlebars-v1.3.0.js"></script>
+		<script src="js/libs/ember.min.js"></script>
+
+		<!-- Application JavaScript Files -->
+		<script src="js/app.js"></script>
+		<script src="js/all_mixins.js"></script>
+		<script src="js/all_controllers.js"></script>
+		<script src="js/all_routes.js"></script>
+		<script src="js/views_components_helpers.js"></script>
+		<script src="js/router.js"></script>
+		<script src="js/jquery_code.js"></script>
+
+
+		<!-- This is for Custom Choose File Button in Dialog Boxes -->
+		<script type="text/javascript" src="js/libs/si.files.js"></script>
+		<script type="text/javascript">
+			SI.Files.stylizeAll();
+		</script>
+	</body>
+</html>

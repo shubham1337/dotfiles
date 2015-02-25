@@ -1,0 +1,2929 @@
+html
+{
+	width: 100%;
+	height: 100%;
+	/* Default font */
+	font-size: 100%;
+	font-family: 'Lato', sans-serif;
+}
+body
+{
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	background-color: #ffffff;
+	/* This is for smooth elastic scrolling in touch devices*/
+	-webkit-overflow-scrolling: touch;
+}
+
+/* What if the use uses a PRE tag?, This is to wrap the text inside it */
+pre 
+{
+	white-space: pre-wrap;       /* css-3 */
+	white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+	white-space: -pre-wrap;      /* Opera 4-6 */
+	white-space: -o-pre-wrap;    /* Opera 7 */
+	word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+/* For no underlines in any link */
+a 
+{
+	text-decoration: none;
+}
+
+/* Setting default values for all lists in the webapp */
+ul
+{
+	margin: 0px;
+	padding: 0px;
+}
+li
+{
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+
+/* Overlay and Dialog boxes */
+/* Quick Find: overlayTemplate */
+div.overlayDiv
+{
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background-color: #ffffff;
+	opacity: 0.5;
+	z-index: 3;
+	display: none;
+}
+
+div.largeDiv
+{
+	width: 100%; 
+	height: 100%;
+	position: fixed; 
+	top: 0px; 
+	left: 0px; 
+	z-index: 7;
+}
+
+div.dialogContents
+{
+	width: 50%;
+	padding: 4% 8%;
+	margin: auto;
+	background-color: #ffffff;
+	font-size: 1.5rem;
+	color: #64908a;
+	border-style: solid;
+	border-color: #64908a;
+	border-width: 0.4em;
+	z-index: 8;
+	-moz-box-shadow:    3px 3px 5px 0px #000000;
+	-webkit-box-shadow: 3px 3px 5px 0px #000000;
+	box-shadow:         3px 3px 5px 0px #000000;
+	cursor: all-scroll;
+	position: absolute;
+	top: 10%;
+	left: 20%;
+	overflow: auto;
+}
+
+div.dialogBody
+{
+	width: 100%;
+	display: inline-block;
+}
+
+div.dialogExitButton
+{
+	cursor: pointer;
+	float: left;
+	position: relative;
+	top: 5px;
+	z-index: 1;
+}
+
+div.dialogExitButton img
+{
+	width: 50%;
+}
+
+div.dialogTitle
+{
+	width: 90%;
+	margin-bottom: 10px;
+	font-size: 1.9rem;
+	cursor: text;
+	position: relative;
+	left: 10%;
+}
+
+div.dialogTitle span
+{
+	text-align: center;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+}
+
+div.quillContainer
+{
+	width: 100%;
+	background-color: #e0e0e0;
+}
+
+div.quillToolbar
+{
+	background-color: #ffffff;
+}
+
+/* **************************************** */
+/* =================LOGIN PAGE============= */
+/* **************************************** */
+/* Quick Find: loginPageTemplate */
+
+img.loginPageLogo
+{
+	width: 300px;
+	height: 130px;
+	float: left;
+	position: absolute;
+	top: 5%;
+	left: 60%;
+	opacity: 1;
+	-webkit-transition: top 0.5s, left 0.5s, width 0.5s, height 0.5s, opacity 0.5s;
+	-moz-transition: top 0.5s, left 0.5s, width 0.5s, height 0.5s, opacity 0.5s;
+	-o-transition: top 0.5s, left 0.5s, width 0.5s, height 0.5s, opacity 0.5s;
+	transition: top 0.5s, left 0.5s, width 0.5s, height 0.5s, opacity 0.5s;
+}
+
+div.loginButton, div.signUpButton
+{
+	width: 200px;
+	height: 45px;
+	padding-top: 10px;
+	float: right;
+	font-size: 24px;
+	font-family: 'Lato', sans-serif;
+	color: #ffffff;
+	background-color: #64908a;
+	text-align: center;
+	cursor: pointer;
+	position: absolute;
+	left: 65%;
+	opacity: 1;
+	-webkit-transition: top 0.5s, left 0.5s, height 0.5s, width 0.5s, background-color 0.5s, opacity 0.5s;
+	-moz-transition: top 0.5s, left 0.5s, height 0.5s, width 0.5s, background-color 0.5s, opacity 0.5s;
+	-o-transition: top 0.5s, left 0.5s, height 0.5s, width 0.5s, background-color 0.5s, opacity 0.5s;
+	transition: top 0.5s, left 0.5s, height 0.5s, width 0.5s, background-color 0.5s, opacity 0.5s;
+}
+
+div.loginButton
+{
+	top: 35%;
+}
+
+div.signUpButton
+{
+	top: 55%;
+}
+
+span.insideText
+{
+	-webkit-transition: font-size 0.5s;
+	-moz-transition: font-size 0.5s;
+	-o-transition: font-size 0.5s;
+	transition: font-size 0.5s;
+}
+
+div.morphBox
+{
+	display: none;
+}
+
+div.morphForm
+{
+	margin-top: 20px;
+	padding: 0px 30px;
+	color: #64908a;
+}
+
+div.morphForm label
+{
+    color: #64908a;
+	float: left;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 8%;
+}
+div.morphForm span
+{
+	float:left;
+	color:#CC2A41;
+    font-size: 16px;
+    margin-left: 8%;
+	width: 80%;
+	height:16px;
+	padding:2px;
+}
+
+div.morphForm input,select
+{
+	width: 80%;
+	margin: 0px 8%;
+	font-family: 'Lato',sans-serif;
+	color: #64908a;
+	font-size: 22px;
+	background: transparent;
+	float: left;
+}
+div.morphFormButton
+{
+	width: 70%;
+	height: 35px;
+	margin: 10% 15%;
+	padding: 10px 0px;
+	float: left;
+	font-size: 24px;
+	color: #ffffff;
+	background-color: #64908a;
+	cursor: pointer;
+}
+
+div.xMorphButton
+{
+	cursor: pointer;
+	position: absolute;
+	top: 5%;
+	left: 5%;
+}
+
+div.xMorphButton img
+{
+	width: 45%;
+}
+
+div.coursesOnOfferBox
+{
+	width: 100%;
+	min-width: 320px;
+	height: 60px;
+	padding-top: 20px;
+	background-color: #e8ddcb;
+	color: #64908a;
+	font-size: 30px;
+	font-family: 'Lato', sans-serif;
+	text-align: center;
+	cursor: pointer;
+	position: absolute;
+	top: calc(100% - 80px);
+	-webkit-transition: top 0.5s;
+	-moz-transition: top 0.5s;
+	-o-transition: top 0.5s;
+	transition: top 0.5s;
+}
+
+img.coursesOnOfferButton
+{
+	width: 31px;
+	height: 31px;
+	position: relative;
+	top: 5px;
+}
+
+div.allCoursesBox
+{
+	width: 98%;
+	position: absolute;
+	top: 101%;
+	left: 1%;
+	-webkit-transition: top 0.5s;
+	-moz-transition: top 0.5s;
+	-o-transition: top 0.5s;
+	transition: top 0.5s;
+	display: none;
+}
+
+div.singleCourseBox
+{
+	width: 98%;
+	max-width: 480px;
+	margin: 1%;
+	float: left;
+    position: relative;
+}
+
+img.courseImage
+{
+	width: 100%;
+}
+
+div.courseInfoBox
+{
+	width: 32%;
+	height: 94.2%;
+	padding: 1%;
+	padding-left: 2%;
+	font-family: 'Lato', sans-serif;
+	color: #ffffff;
+	background-color: #64908a;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+
+span.smallText
+{
+	font-size: 18px;
+}
+
+/* Login Page animation classes */
+/* Quick Find: loginPageAnimation */
+div.moveCourseOnOfferBox
+{
+	top: 0px;
+}
+
+div.moveAllCoursesBox
+{
+	top: 90px;
+}
+
+img.moveLogoTop
+{
+	width: 150px;
+	height: 65px;
+	top: 5px;
+	left: 15px;
+	z-index: 2;
+}
+
+div.moveLoginButton, div.moveSignUpButton
+{
+	width: 15%;
+	max-width: 150px;
+	top: 12px;
+	z-index: 2;
+}
+
+div.moveLoginButton
+{
+	left: 68%;
+}
+
+div.moveSignUpButton
+{
+	left: 84%;
+}
+
+
+div.makeBox
+{
+	top: 15%;
+	left: 40%;
+	width: 340px;
+	max-width: 100%;
+	height: 420px;
+	cursor: auto;
+	z-index: 4;
+	color: #64908a;
+	background-color: #ffffff;
+	border-style: solid;
+	border-width: 10px;
+}
+
+div.loginHeight
+{
+	height: 420px;
+}
+
+div.signUpHeight
+{
+	height: 580px;
+}
+
+div.makeBox span.insideText
+{
+	font-size: 45px;
+}
+
+/*================================*/
+/* Top Navigation Bar starts here */
+/* Quick Find: topNavBarTemplate */
+#topNavBar
+{
+	width: 100%;
+	height: 100px;
+	background-color: #e8ddcb;
+	float: left;
+	position: relative;
+	z-index: 1;
+}
+
+#topNavBar ul
+{
+	width: inherit;
+	min-width: 290px;
+	max-width: 990px;
+	height: inherit;
+	margin: 0px auto;
+	padding: 0px;	
+	overflow: hidden;
+}
+
+#topNavBar li
+{
+	width: 19.5%;
+	margin: 0px;
+	float: left;
+	position: relative;
+	list-style-type: none;
+}
+
+li.topLinks
+{
+	text-align: center;
+	height: 64px;
+}
+
+.iconText
+{
+	color: #64908A;
+	font-size: 1.5rem;
+	opacity: 0;
+	position: relative;
+	top: 15px;
+	left: 65px;
+	-webkit-transition: opacity 0.3s ease-in-out;
+	-moz-transition: opacity 0.3s ease-in-out;
+	-o-transition: opacity 0.3s ease-in-out;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.linkBox
+{
+	width: 100%;
+	height: 100%;
+	padding: 18px 0px;
+	text-align: center;
+}
+
+#topNavBar ul li:first-child
+{
+	height: 80px;
+	padding: 10px 0px;
+}
+
+
+/* Top Nav Bar Animation */
+/* Quick Find: topNavBarAnimation */
+#topNavBar img
+{
+	position: absolute;
+	margin: 0px auto;
+	-webkit-transition: opacity 0.3s ease-in-out;
+	-moz-transition: opacity 0.3s ease-in-out;
+	-o-transition: opacity 0.3s ease-in-out;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.iconActive
+{
+	opacity: 0;
+}
+
+.topLinks:hover .iconActive, .topLinks:hover .iconText
+{
+	opacity: 1;
+}
+
+.topLinks:hover .icon
+{
+	opacity: 0;
+}
+
+.topLinks a.active .iconActive
+{
+	opacity: 1;
+}
+
+.topLinks a.active .icon
+{
+	opacity: 0;
+}
+
+/*===========================*/
+/* Side Menu Bar starts here */
+/* Quick Find: sideMenuBarTemplate */
+#sideMenuBar 
+{
+	width: 20%;
+	float: left;
+	position: relative;
+}
+
+#sideMenuBar ul
+{
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+#sideMenuBar li
+{
+	width: 100%;
+	height: 1.4em;
+	font-size: 24px;
+	margin-top: 0px;
+	margin-bottom: 2px;
+	padding: 0px;
+	list-style-type: none;
+	position: relative;
+}
+
+.sideMenuBar1, .sideMenuBar1 a:visited, .sideMenuBar1 a:link
+{
+	color: #031634;
+}
+
+.sideMenuBar2, .sideMenuBar2 a:visited, .sideMenuBar2 a:link
+{
+	color: #036564;
+}
+
+.sideMenuBar3, .sideMenuBar3 a:visited, .sideMenuBar3 a:link
+{
+	color: #f27435;
+}
+
+.box1, .box2, .box3
+{
+	height: 1.4em;
+	width: 2px;
+	padding: 0px;
+	margin: 0px;
+	position: relative;
+	z-index: 1;
+	-webkit-transition: width 0.5s;
+	-moz-transition: width 0.5s;
+	-o-transition: width 0.5s;
+	transition: width 0.5s;
+}
+
+.box1
+{
+	background-color: #031634;
+}
+
+.box2
+{
+	background-color: #036564;
+}
+
+.box3
+{
+	background-color: #f27435;
+}
+
+.text1, .text2, .text3
+{
+	padding: 0px;
+	margin: 0px;
+	position: absolute;
+	top: 0px;
+	left: 8px;
+	z-index: 2;
+}
+
+div#searchBox
+{
+	height: 40px;
+	width: 100%;
+	margin: 15px 0px 30px 0px;
+	position: relative;
+
+}
+
+img#searchBoxBackgroundImage
+{
+	height: inherit;
+	width: 79%;
+	margin: 0px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: -1;
+}
+
+img#searchBoxIcon
+{
+	width: 18px;
+	cursor: pointer;
+	position: absolute;
+	top: 10px;
+	left: 85%;
+}
+
+input#searchBoxText
+{
+	width: 70%;
+	height: 30px;
+	outline: 0px;
+	border: 0px;
+	padding: 5px 10px;
+	margin: 0px;
+	float: left;
+	color: #b2b2b2;
+	font-size: 1.3rem;
+	font-family: "Lato", sans-serif;
+	background: transparent;
+	position: absolute;
+	top: 0px;
+}
+
+/* Side Menu Bar Animation */
+/* Quick Find: sideMenuBarAnimation */
+.sideMenuBar1:hover .text1, .sideMenuBar2:hover .text2, .sideMenuBar3:hover .text3
+{
+	color: #ffffff;
+}
+
+.sideMenuBar1:hover .box1, .sideMenuBar2:hover .box2, .sideMenuBar3:hover .box3
+{
+	width: 100%;
+}
+
+#sideMenuBar a.active .text1, #sideMenuBar a.active .text2, #sideMenuBar a.active .text3
+{
+	color: #ffffff;
+}
+
+#sideMenuBar a.active .box1, #sideMenuBar a.active .box2, #sideMenuBar a.active .box3
+{
+	width: 104%;
+}
+
+/*===============================*/
+/* Content Container starts here */
+/* Quick Find: containerTemplate */
+
+/* This is for custom divs created by ember */
+body > div, body > div > div
+{
+	width: 100%;
+	height: 100%;
+}
+
+#bigContainer
+{
+	width: 100%;
+	height: 100%;
+	min-height: 680px;
+	min-width: 270px;
+	max-width: 990px;
+	margin: 0px auto;
+	position: relative;
+}
+
+#containerTopPaddingBox
+{
+	width: 100%;
+	height: 105px;
+}
+
+#container
+{
+	width: 77%;
+	min-height: 100%;
+	max-width: 770px;
+	margin: 0px;
+	padding: 0px 0px 0px 3%;
+	float: left;
+	border-left-style: solid;
+	border-left-color: #cc2a41;
+	border-left-width: 2px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	-webkit-transition: width 0.5s;
+	-moz-transition: width 0.5s;
+	-o-transition: width 0.5s;
+	transition: width 0.5s;
+}
+
+ul.containerHeader
+{
+	width: 98%;
+	margin: 0px;
+	padding: 0px;
+	color: #64908a;
+	font-size: 1.1rem;
+	display: inline-block;
+}
+
+ul.containerLowerHeader
+{
+	width: 98%;
+	margin: 0px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 0px;
+	color: #64908a;
+	font-size: 1.2rem;
+	display: inline-block;
+}
+
+ul.containerLowerHeader a:visited, ul.containerLowerHeader a:link
+{
+	color: #64908a;	
+}
+
+ul.containerLowerHeader li:first-child
+{
+	padding-left: 1.6%;
+}
+
+ul.containerLowerHeader li:nth-child(2)
+{
+	text-align: center;
+}
+
+ul.containerLowerHeader li:last-child
+{
+	text-align: right;
+	float: right;
+}
+
+ul.containerLowerHeader li, ul.containerHeader li
+{
+	width: 49%;
+	float: left;
+	list-style: none;
+}
+
+li.containerLowerHeaderSummaryPage
+{
+	font-size: 1.7rem;
+}
+.addShadow
+{
+	-moz-box-shadow:    0px 3px 5px 0px #000000;
+	-webkit-box-shadow: 0px 3px 5px 0px #000000;
+	box-shadow:         0px 3px 5px 0px #000000;
+}
+
+ul.containerHeader li
+{
+	width: 30%;
+	float: left;
+	list-style: none;
+}
+
+/* This is the li for the sideMenuButton which pops into view when screen width < 850 */
+ul.containerHeader li:first-child
+{
+	width: 40px;
+}
+
+div.sideMenuButton
+{
+	width: 40px;
+	height: 37px;
+	padding-top: 1px;
+	background-color: #E8DDCB;
+	cursor: pointer;
+	z-index: 2;
+	display: none;
+	position: relative;
+	left: 0px;
+	-webkit-transition: left 0.5s;
+	-moz-transition: left 0.5s;
+	-o-transition: left 0.5s;
+	transition: left 0.5s;
+}
+
+div.firstBar,  div.secondBar, div.thirdBar
+{
+	width: 30px;
+	height: 3px;
+	margin: 7px 5px;
+	background-color: #64908a;
+	position: relative;
+    -webkit-transform:  rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: -webkit-transform 0.5s, top 0.5s, opacity 0.5s;
+	-moz-transition: -moz-transform 0.5s, top 0.5s, opacity 0.5s;
+	-o-transition: -ms-transform 0.5s, top 0.5s, opacity 0.5s;
+	transition: transform 0.5s, top 0.5s, opacity 0.5s;
+}
+
+/* Course ID (ESC101 etc.) */
+ul.containerHeader li:nth-child(2)
+{
+	padding-left: 1.6%;
+	font-size: 20px;
+}
+
+/* Course Name (Fundamentals of computing etc.) */
+ul.containerHeader li:nth-child(3)
+{
+	width: 40%;
+	font-size: 20px;
+	text-align: right;
+	float: right;
+}
+
+div.containerSummary
+{
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+}
+
+div.containerSummary li
+{
+	float: left;
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+
+ul.containerSummaryHead
+{
+	width: 98%;
+	margin-top: 5px;
+}
+
+ul.containerSummaryHead li
+{
+	color: #b2b2b2;
+	padding: 0px;
+	padding-left: 1.5%;
+	font-size: 0.9rem;
+	list-style-type: none;
+}
+
+ul.containerSummaryHead li:nth-child(3)
+{
+	padding-right: 1.5%;
+	float: right;
+}
+
+ul.containerSummaryHead li:nth-child(2)
+{
+	width: 20%;
+	float: right;
+	text-align: right;
+	padding: 0px;
+	padding-right: 1%;
+}
+
+ul.containerSummaryList
+{
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+}
+
+ul.containerSummaryList li
+{
+	width: 100%;
+	margin: 2px 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+
+div.containerItem
+{
+	width: 95%;
+	min-height: 1.4em;
+	margin: 0px;
+	padding: 1.5%;
+	background-color: #64908a;
+	font-size: 1.2rem;
+	color: #ffffff;
+	display: inline-block;
+}
+
+div.containerItem:hover
+{
+	background-color: #F4F1ED;
+	color: #64908a;
+}
+
+div.containerItem span
+{
+	max-width: 57%;
+}
+
+div.containerItem span:nth-child(1)
+{
+	float: left;
+}
+
+div.containerItem span:nth-child(2)
+{
+	width: 22%;
+	float: right;
+	text-align: right;
+}
+
+div.containerItem span:nth-child(3)
+{
+	float: right;
+}
+
+/* ======================================== */
+/* Content Inside the container starts here */
+/* ======================================== */
+
+/* Home Page */
+/* Quick Find: homeTemplate */
+div.latestLectures, div.updatedForums, div.createdWiki
+{
+	margin: 0px;
+	margin-bottom: 25px;
+	width: 100%;
+	font-size: 1.4rem;
+	color: #64908a;
+}
+
+/* This selects the headings (Latest Lectures, Upadated Forums etc.) */
+div.latestLectures > span, div.updatedForums > span, div.createdWiki > span
+{
+	padding-left: 1.5%;
+}
+
+/* User Profile Page */
+/* Quick Find: userProfileTemplate */
+div.userPicLarge
+{
+	width: 80px;
+	height: 80px;
+	margin-right: 5px;
+	border-radius: 100%;
+	border-width: 2px;
+	border-color: #cc2a41;
+	border-style: solid;
+	background-color: #64908a;
+	overflow: hidden;
+	float: left;
+}
+
+div.userPicLarge img
+{
+	width: 100%;
+}
+
+div.userInfoBox
+{
+	margin-left: 100px;
+	margin-bottom: 30px;
+	font-size: 1.3rem;
+	position: relative;
+	top: -4px;
+}
+
+span.userLargeUserName
+{
+	color: #64908a;
+	font-size: 1.7rem;
+}
+
+span.userProfileBlueColor
+{
+	color: #64908a;
+}
+
+ul.userProfileNameList
+{
+	margin: 0px;
+	margin-left: 45px;
+	padding: 0px;
+}
+
+ul.userProfileNameList li
+{
+	width: 32.6%;
+	margin: 0px;
+	margin-bottom: 25px;
+	padding: 0px;
+	font-size: 1.3rem;
+	list-style-type: none;
+	float: left;
+}
+
+ul.userProfileNameList li:nth-child(3)
+{
+	text-align: right;
+}
+
+div.userProfileStats
+{
+	margin-left: 45px;
+	font-size: 1.5rem;
+	color: #64908a;
+	display: inline-block;
+}
+
+ul.userProfileStatsList
+{
+	margin: 0px;
+	padding: 0px;
+}
+
+ul.userProfileStatsList li
+{
+	width: 95%;
+	margin: 0px;
+	padding: 10px;
+	font-size: 1.1rem;
+	background-color: #64908a;
+	color: #ffffff;
+	list-style-type: none;
+	float: left;
+}
+
+/* The Lecture Summary page */
+/* Quick Find: lecturesTemplate */
+
+ul.lectureSummaryHead
+{
+	width: 98%;
+	height: 20px;
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+}
+
+ul.lectureSummaryHead li
+{
+	margin: 0px;
+	padding: 0px;
+	font-size: 0.9rem;
+	color: #b2b2b2;
+	list-style-type: none;
+	float: left;
+	position: relative;
+}
+
+ul.lectureSummaryHead li:nth-child(1)
+{
+	left: 1.7%;
+}
+
+ul.lectureSummaryHead li:nth-child(2)
+{
+	left: 5%;
+}
+
+ul.lectureSummaryHead li:nth-child(3)
+{
+	float: right;
+	right: 0.6%;
+}
+
+ul.lectureSummaryHead li:nth-child(4)
+{
+	float: right;
+	right: 3.8%;
+}
+
+ul.lectureSummary
+{
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+div.lectureSummaryBox
+{
+	width: 100%;
+	height: 550px;
+}
+
+ul.lectureSummaryBig
+{
+	width: 100%;
+	margin: 0px;
+	margin-bottom: 10px;
+	padding: 0px;
+}
+
+ul.lectureSummary li, ul.lectureSummaryBig li
+{
+	width: 98%;
+	margin: 4px 0px;
+	padding: 0px;
+	list-style-type: none;
+	position: relative;
+	display: inline-block;
+}
+
+ ul.lectureSummaryBig li
+ {
+ 	margin: 2px 0px;
+ }
+
+ul.lectureSummary a:visited, ul.lectureSummary a:link, ul.lectureSummaryBig a:visited, ul.lectureSummaryBig a:link
+{
+	color: #ffffff;
+}
+
+div.lectureInfoBox
+{
+	min-height: 2.3em;
+	width: 89%;
+	float: left;
+	background-color: #64908a;
+	color: #ffffff;
+	font-size: 1.2rem;
+	display: inline;
+}
+
+div.lectureInfoBox:hover
+{
+	color: #64908a;
+	background-color: #F4F1ED;
+}
+
+ul.lectureSummary a:hover + div.lectureInfoBoxResources, ul.lectureSummaryBig a:hover + div.lectureInfoBoxResources
+{
+	background-color: #F4F1ED;
+}
+
+div.lectureInfoBoxText
+{
+	margin: 2%; 
+	float: left;
+	display: inline-block;
+}
+
+ul.lectureSummaryBig div.lectureInfoBox div.lectureInfoBoxText:first-child
+{
+	width: 4%;
+	margin: 2%;
+	float: left;
+	text-align: right;
+}
+
+div.lectureInfoBoxLength
+{
+	margin: 12px;
+	float: right;
+}
+
+div.lectureInfoBoxLengthInMiddle
+{
+	margin: 12px;
+	float: right;
+	margin-right: 110px;
+}
+
+div.lectureInfoBoxResources
+{
+	width: 11%;
+	min-width: 60px;
+	height: 100%;
+	background-color: #64908a;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+}
+
+div.lectureInfoBoxResources img
+{ 
+	width: 35px;
+	margin: 3px;
+	float: right;
+	cursor: pointer;
+}
+
+div.pagination
+{
+	width: 735px;
+	height: 45px;
+	margin: auto;
+	position: relative;
+	top: 45px;
+}
+
+ul.paginationInnerWrapper
+{
+	margin: auto;
+	padding: 0px;
+	height: inherit;
+	list-style: none;
+	display: block;
+	float: left;
+	position: relative;
+	left: 50%;
+}
+
+ul.paginationInnerWrapper li
+{
+	width: 35px;
+	height: 35px;
+	margin: 2px;
+	padding: 2px;	
+	display: block;
+	float: left;
+	text-align: center;
+	position: relative;
+	right: 50%;
+	list-style-type: none;
+	cursor: pointer;
+}
+
+.pageNo
+{
+	width: 35px;
+	height: 35px;
+	font-size: 1.4rem;
+	border-style: solid;
+	border-radius: 100%;
+	border-width: 2px;
+	border-color: #cc2a41;
+	color: #cc2a41;
+}
+
+.pageNo a:link, .pageNo a:visited
+{
+	color: #cc2a41;
+}
+
+.pageNo:hover
+{
+	background-color: #cc2a41;
+	color: #ffffff;
+}
+
+.pageNoActive
+{
+	width: 35px;
+	height: 35px;
+	font-size: 1.4rem;
+	border-style: solid;
+	border-radius: 100%;
+	border-width: 2px;
+	border-color: #cc2a41;
+	background-color: #cc2a41;
+	color: #ffffff;
+}
+
+div.lectureResourcesDialogBox
+{
+	width: 100%;
+	margin-bottom: 2%;
+	float: left;
+	clear: both;
+	display: inline-block;
+}
+
+div.lectureResourcesDialogBox a:visited, div.lectureResourcesDialogBox a:link
+{
+	color: #64908a;
+}
+
+div.lectureResourcesDialogBox img
+{
+	width: 35px;
+	float: left;
+}
+
+div.lectureResourcesDialogBox span
+{
+	margin-left: 1%;
+	font-size: 1.2rem;
+	float: left;
+}
+
+div.lectureDialogBoxTitle
+{
+	color: #64908a;
+	text-align: center;
+	cursor: text;
+}
+
+/* Lecture page for every lecture */
+/* Quick Find: lectureTemplate */
+div.lectureVideoBox
+{
+	width: 84%;
+	height: 400px;
+	margin-left: 5%;
+	float: left;
+}
+
+div.videoElement
+{
+	width: 100%;
+	height: 360px;
+	float: right;
+}
+
+span.lectureDuration
+{
+	font-size: 1.1rem;	
+	color: #64908a;
+	float: right;
+}
+
+div.lectureResourcesBox
+{
+	width: 11%;
+	height: 50px;
+	float: left;
+	position: relative;
+	top: 315px;
+}
+
+div.lectureResourcesBox img
+{
+	width: 35px;
+	margin: 0px 1px;
+	cursor: pointer;
+	float: right;
+}
+
+div.lectureDiscussionBox
+{
+	width: 100%;
+	min-height: 130px;
+	float: left;
+}
+
+div.lectureQuestionsAndComments
+{
+	width: 100%;
+	margin-bottom: 20px;
+	color: #64908a;
+	font-size: 1.7rem;
+}
+
+div.commentPostButton
+{
+	width: 70px;
+	height: 25px;
+	padding: 5px;
+	background-color: #e8ddcb;
+	color: #cc2a41;
+	font-size: 1.2rem;
+	text-align: center;
+	cursor: pointer;
+	float: right;
+	position: relative;
+	top: 5px;
+	right: 0px;
+}
+
+span.noComments
+{
+	width: 100%;
+	text-align: center;
+	font-size: 1.2rem;
+	color: #64908a;
+	position: relative;
+	top: 20px;
+}
+
+/* =========================== */
+/* Assignment Page starts here */
+/* Quick Find: assignmentTemplate */
+div.assignmentTitleBox
+{
+	width: 100%;
+	margin-left: 1.5%;
+	font-size: 1.5rem;
+	color: #64908a;
+}
+
+div.assignmentViewBox
+{
+	width: 97%;
+	height: 400px;
+	margin: 0px 0px 12px 0px;
+	color: #64908a;
+	display: inline-block;
+}
+
+div.assignmentSubmitButton
+{
+	width: 100px;
+	height: 25px;
+	margin-top: 10px;
+	margin-left: 12px;
+	padding: 10px;
+	background-color: #e8ddcb;
+	color: #cc2a41;
+	font-size: 1.2rem;
+	text-align: center;
+	font-weight: bold;
+	float: left;
+	cursor: pointer;
+}
+
+div.greyedOut
+{
+	background-color: #F4F1ED;
+	color: #62605F;
+	cursor: default;
+}
+
+div.assignmentDueDate
+{
+	color: #64908a;
+	margin: 20px 5px;
+	font-size: 1.2rem;
+	font-weight: bold;
+	float: left;
+}
+
+/* These are for custom "Choose file" button */
+.SI-FILES-STYLIZED label.assignmentChooseFileButton
+{
+	width: 150px;
+	height: 30px;
+	padding: 5px 0px;
+	margin-right: 20px;
+	background-color: #e8ddcb;
+	color: #cc2a41;
+	font-size: 1.2rem;
+	text-align: center;
+	font-weight: bold;
+	float: left;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.SI-FILES-STYLIZED label.assignmentChooseFileButton .file
+{
+	position: relative;
+    height: 100%;
+    width: auto;
+    opacity: 0;
+    cursor: pointer;
+   	position: relative;
+   	top: -25px;
+}
+
+div.assignmentUploadButton
+{
+	width: 150px;
+	height: 30px;
+	padding: 5px;
+	margin-left: 20px;
+	background-color: #e8ddcb;
+	color: #cc2a41;
+	font-size: 1.2rem;
+	text-align: center;
+	font-weight: bold;
+	float: left;
+	cursor: pointer;
+}
+
+div.assignmentSubmitDialogBoxButton
+{
+	width: 200px;
+	height: 30px;
+	padding: 15px 10px;
+	margin: auto;
+	margin-bottom: 80px;
+	background-color: #e8ddcb;
+	color: #cc2a41;
+	font-size: 1.2rem;
+	text-align: center;
+	font-weight: bold;
+	clear: both;
+	cursor: pointer;
+	position: relative;
+	top: 80px;
+}
+
+/* ===================== */
+/* Quiz Page starts here */
+/* Quick Find: quizTemplate */
+div.quizMultipleChoiceBox
+{
+	width: 100%;
+	margin-bottom: 10px;
+	padding: 5px;
+	padding-bottom: 30px;
+	border-bottom: solid;
+	border-width: 1px;
+	background-color: #ffffff;
+	color: #64908a;
+	font-size: 1.2rem;
+}
+
+span.quizQuestion
+{
+	margin: 5px;
+}
+
+span.quizQuestion span
+{
+	margin-left: 10px;
+}
+
+ul.quizMultipleChoiceOptions
+{
+	margin: 0px;
+	margin-top: 15px;
+	padding: 0px;
+}
+
+ul.quizMultipleChoiceOptions li
+{
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+
+ul.quizMultipleChoiceOptions label
+{
+	cursor: pointer;
+}
+
+.custom-checkbox
+{
+    width: 21px;
+    height: 21px;
+    margin: 5px;
+    margin-right: 10px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    top: 9px;
+    background: url("../icons/CheckBoxUnchecked@2X.png") no-repeat;
+	background-size: 21px 21px;
+}
+
+.custom-checkbox.selected
+{
+    background: url("../icons/CheckBoxChecked@2X.png") no-repeat;
+	background-size: 21px 21px;
+}
+
+.custom-checkbox input[type="checkbox"]
+{
+    margin: 0;
+    position: absolute;
+    z-index: 2;            
+    cursor: pointer;
+    outline: none;
+    opacity: 0;
+}
+
+.custom-radio
+{
+	width: 21px;
+	height: 21px;
+	margin: 5px;
+	margin-right: 10px;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	top: 9px;
+	background: url("../icons/RadioButtonUnchecked@2X.png") no-repeat;
+	background-size: 21px 21px;
+}
+
+.custom-radio.selected
+{
+	background: url("../icons/RadioButtonChecked@2X.png") no-repeat;
+	background-size: 21px 21px;
+}
+
+.custom-radio input[type="radio"]
+{
+	margin: 1px;
+	position: absolute;
+	z-index: 2;            
+	cursor: pointer;
+	outline: none;
+	opacity: 0;
+}
+
+
+
+/* ======================= */
+/* Events Page starts here */
+/* Quick Find: eventsTemplate */
+ul.eventsList
+{
+	width: 100%;
+	margin: 0px;
+	margin-top: 40px;
+	padding: 0px;
+}
+
+ul.eventsList li
+{
+	width: 100%;
+	margin: 0px;
+	margin-bottom: 40px;
+	padding: 0px;
+	float: left;
+	clear: both;
+	list-style-type: none;
+	position: relative;
+}
+
+div.eventDateTime
+{
+	float: left;
+	position: relative;
+}
+
+div.eventYear
+{
+	color: #cc2a41;
+	font-size: 1.2rem;
+	float: left;
+	position: relative;
+	top: 12px;
+	left: 5%;
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+
+div.eventMonth
+{
+	padding: 3.3% 18%;
+	background-color: #cc2a41;
+	color: #ffffff;
+	font-size: 1.8rem;
+	float: left;
+}
+
+div.eventDay
+{
+	margin-left: 32%;
+	color: #cc2a41;
+	font-size: 4.9rem;
+	clear: both;
+}
+
+div.eventTime
+{
+	margin-left: 12%; 
+	color: #cc2a41;
+	float: left;
+}
+
+div.eventTime img
+{
+	width: 19%;
+	float: left;
+}
+
+div.eventTime span
+{
+	margin-left: 6%;
+	font-size: 1.7rem;
+}
+
+div.eventBody
+{
+	width: 67%;
+	color: #64908a;
+	position: relative;
+	top: -5px;
+	display: inline-block;
+}
+
+div.eventBody span
+{
+	margin: 20px 5px;
+	font-size: 1.3rem;
+}
+
+div.eventBody h5
+{
+	margin: 0px;
+	padding: 0px;
+	font-size: 1.7rem;
+	font-weight: normal;
+}
+
+div.eventBody hr
+{
+	width: 350px;
+	margin: 0px;
+	margin-top: 30px;
+	padding: 0px;
+	border-width: 1px;
+	border-color: #b2b2b2;
+	border-style: solid;
+}
+
+div.eventBody a:visited
+{
+	color: blue;
+}
+
+/* ========================= */
+/* Announcements starts here */
+/* Quick Find: announcementsTemplate */
+div.announcementBody
+{
+	width: 87%;
+	margin-left: 2%;
+	color: #64908a;
+	position: relative;
+	top: -5px;
+	display: inline-block;
+}
+
+div.announcementBody span
+{
+	margin: 20px 0px;
+	font-size: 1.2rem;
+	display: inline-block;
+}
+
+div.announcementBody h5
+{
+	margin: 0px;
+	padding: 0px;
+	font-size: 1.7rem;
+	font-weight: normal;
+}
+
+div.announcementBody a:visited
+{
+	color: blue;
+}
+
+
+/* ====================== */
+/* Forum Page starts here */
+/* Quick Find: forumTemplate */
+
+div.forumsSummaryBox
+{
+	width: 100%;
+	height: 600px;
+}
+
+div.forumTopicBox
+{
+	width: 100%;
+	position: relative;
+}
+
+div.userPicWrapper
+{
+	width: 7%;
+	padding-top: 7%;
+	margin: 1%;
+	float: left;
+	position: relative;
+}
+
+div.userPic
+{
+	width: 100%;
+	height: 100%;
+	border-radius: 100%;
+	border-width: 2px;
+	border-color: #cc2a41;
+	border-style: solid;
+	background-color: #b2b2b2;
+	overflow: hidden;
+	position: absolute;
+	top: -3%;
+	left: -3%;
+}
+
+div.userPic img, div.forumUserPic img
+{
+	width: 100%;
+	margin: auto;
+}
+
+div.forumUserPic
+{
+	width: 60px;
+	height: 60px;
+	margin: 5px 0px;
+	border-radius: 100%;
+	border-width: 2px;
+	border-color: #cc2a41;
+	border-style: solid;
+	background-color: #b2b2b2;
+	overflow: hidden;
+	float: left;
+}
+
+div.forumTopicBody
+{
+	width: 89%;
+	float: right;
+	font-size: 1.2rem;
+	color: #64908a;
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+	position: relative;
+}
+
+
+div.forumUserName
+{
+	font-size: 1rem;
+	padding-bottom: 6px;
+}
+
+div.forumUserName a:link, div.forumUserName a:visited
+{
+	color: #64908a;
+}
+
+div.forumUserName span
+{
+	font-weight: bold;
+}
+
+div.forumTopicTopic
+{
+	font-size: 1.7rem;
+	margin: 0px 0px 10px 0px;
+	padding-right: 150px;
+}
+
+div.forumTopicDescription
+{
+	padding-bottom: 20px;
+	padding-right: 150px;
+}
+
+div.forumTopicBody:hover div.commentEditButton, div.forumTopicBody:hover div.commentReplyButton
+{
+	visibility: visible;
+}
+
+div.topRightDateTime
+{
+	font-size: 1rem;
+	position: absolute;
+	top: 0px;
+	right: 3px;
+	font-style: italic;
+}
+
+div.topRightDateTimeComment
+{
+	font-size: 1rem;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	font-style: italic;
+}
+
+div.forumsNewTopicButton
+{
+	padding: 5px 10px;
+	font-size: 1.2rem;
+	background-color: #e8ddcb;
+	color: #cc2a41;
+	cursor: pointer;
+	position: absolute;
+	right: 2%;
+}
+
+div.forumDialogAddButton
+{
+	width: 90px;
+	height: 25px;
+	padding: 5px;
+	background-color: #e8ddcb;
+	color: #cc2a41;
+	font-size: 1.2rem;
+	text-align: center;
+	float: right;
+	cursor: pointer;
+	position: relative;
+	top: 10px;
+}
+
+input.forumDialogSubjectBox
+{
+	width: 97%;
+	outline: 0px;
+	border: 0px;
+	padding: 1.5%;
+	margin: 8px 0px 26px 0px;
+	float: left;
+	background-color: #e0e0e0;
+	color: #595959;
+	font-size: 1.5rem;
+	font-family: 'Lato', sans-serif;
+}
+
+
+
+div.forumNoComments
+{
+	width: 100%;
+	float: left;
+}
+
+/* Quick Find: commentsSectionTemplate */
+div.commentsSection
+{
+	width: 98%;
+	margin: 0px;
+	margin-bottom: 20px;
+	padding: 5px 1% 10px 1%;
+	background-color: #e8ddcb;
+	position: relative;
+	overflow: hidden;
+}
+
+div.shadowDiv
+{
+	position: absolute;
+	bottom: 10px;
+    left: 11%;	    
+    right: 2%;
+    top: 5px;
+	background-color: #ffffff;
+	-moz-box-shadow:    3px 3px 5px -3px #000000;
+	-webkit-box-shadow: 3px 3px 5px -3px #000000;
+	box-shadow:         3px 3px 5px -3px #000000;
+}
+
+div.singleComment
+{
+	z-index: 5;
+}
+
+div.commentBodyBox
+{
+	width: 88%;
+	min-height: 70px;
+	padding-bottom: 0px;
+	padding-top: 0.5%;
+	padding-left: 1%;
+	padding-right: 0px;
+	margin: 0px;
+	margin-left: 1%;
+	border-bottom-style: solid;
+	border-color: #e8ddcb;
+	border-width: 1px;
+	float: left;
+	background-color: #ffffff;
+	color: #64908a;
+	font-size: 0.9rem;
+	position: relative;
+}
+
+div.commentText
+{
+	padding-bottom: 20px;
+	padding-right: 140px;
+	clear: both;
+	position: relative;
+}
+
+div.commentText:hover div.commentEditButton, div.commentText:hover div.commentReplyButton,
+div.forumUserName:hover ~ div.commentText > div.commentEditButton, div.forumUserName:hover ~ div.commentText > div.commentReplyButton
+{
+	visibility: visible;
+}
+
+div.commentEditButton, div.commentReplyButton
+{
+	width: 50px;
+	height: 25px;
+	padding: 3px;
+	font-size: 1.1rem;
+	color: #cc2a41;
+	background-color: #e8ddcb;
+	text-align: center;
+	cursor: pointer;
+	visibility: hidden;
+	position: absolute;
+	bottom: 5px;
+}
+
+div.commentEditButton
+{
+	right: 67px;
+}
+
+div.commentReplyButton
+{
+	right: 2px;
+}
+
+div.viewAllComments
+{
+	text-align: center;
+	cursor: pointer;
+}
+
+div.innerComment
+{
+	margin: 0px;
+	clear: both;
+	display: none;
+}
+
+div.innerCommentBodyBox
+{
+	width: 89%;
+	min-height: 70px;
+	padding: 0.5% 0px 0px 1%;
+	margin: 0px;
+	margin-left: 1%;
+	margin-top: 0.5%;
+	float: left;
+	background-color: #F4F1ED;
+	color: #64908a;
+	font-size: 0.9rem;
+	position: relative;
+}
+
+div.innerCommentBodyBox:hover > div.commentText > div.commentEditButton,
+ div.innerCommentBodyBox:hover > div.commentText > div.commentReplyButton
+{
+	visibility: visible;
+}
+
+div.singleCommentDialogBox
+{
+	position: relative;
+}
+
+div.singleCommentDialogBox div.commentBodyBox
+{
+	width: 84%;
+	border-style: none;
+}
+
+div.addCommentTextBox
+{
+	width: 100%;
+	position: relative;
+	float: left;
+}
+
+div.addCommentButton
+{
+	width: 90px;
+	height: 25px;
+	padding: 5px;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	background-color: #e8ddcb;
+	color: #cc2a41;
+	font-size: 1.2rem;
+	float: right;
+	text-align: center;
+	cursor: pointer;
+	position: relative;
+}
+
+/* ===================== */
+/* Wiki Page starts here */
+/* Quick Find: wikiTemplate */
+div.wikiEditButton
+{
+	width: 80px;
+	height: 25px;
+	padding: 5px;
+	background-color: #e8ddcb;
+	color: #cc2a41;
+	font-size: 1.2rem;
+	text-align: center;
+	cursor: pointer;
+	float: right;
+}
+
+span.wikiTitle
+{
+	margin: 5px;
+	font-size: 2rem;
+	color: #64908a;
+	display: block;
+}
+
+div.wikiBody
+{
+	margin: 5px;
+	color: #64908a;
+}
+
+div.wikiEditingTopTitle
+{
+	width: 100%;
+	margin-bottom: 20px;
+	color: #64908a;
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+div.wikiEditingForm
+{
+	width: 100%;
+	font-size: 1.5rem;
+	color: #64908a;
+}
+
+div.wikiEditingForm input, div.wikiEditingForm textarea
+{
+	width: 95%;
+	outline: 0px;
+	border-width: 2px;
+	border-color: #000000;
+	border-style: solid;
+	padding: 1% 2%;
+	margin: 0px;
+	float: left;
+	color: #b2b2b2;
+	font-size: 1.3rem;
+	font-family: "Lato", sans-serif;
+}
+
+div.quillContainerWrapper
+{
+	width: 99%;
+}
+
+textarea.wikiEditingDescriptionBox
+{
+	height: 400px;
+}
+
+div.wikiEditingRevisionBox
+{
+	width: 100%;
+	margin-top: 20px;
+	display: inline-block;
+}
+
+div.wikiEditingRevisionBox textarea
+{
+	height: 60px;
+	resize: none;
+}
+
+div.outerWrapperButton
+{
+	width: 100%;
+	margin-bottom: 70px;
+	text-align: center;
+	display: block;
+}
+
+div.wikiEditingSaveChangesButton
+{
+	width: 150px;
+	height: 25px;
+	margin: auto;
+	padding: 5px;
+	background-color: #e8ddcb;
+	color: #cc2a41;
+	font-size: 1.2rem;
+	text-align: center;
+	cursor: pointer;	
+	position: relative;
+	top: 40px;
+}
+
+
+/* Media Queries */
+/* Quick Find: mediaQueries */
+
+/* If width goes below 850px */
+/* Quick Find: mediaQueries850 */
+@media (max-width: 850px) {
+
+	/* Changing the Login Page at 850px */
+	img.loginPageLogo
+	{
+		left: 50%;
+	}
+	
+	div.loginButton, div.signUpButton
+	{
+		left: 55%;
+	}
+
+	div.makeBox
+	{
+		top: 10%;
+		left: 30%;
+	}
+
+	img.moveLogoTop
+	{
+		left: 0px;
+	}
+
+	div.moveLoginButton
+	{
+		left: 70%;
+	}
+
+	div.moveSignUpButton
+	{
+		left: 86%;
+	}
+
+
+	/* Changing the container at 850px */
+	div#container
+	{
+		width: 100%;
+		padding: 0px;
+		left: 0px;
+	}
+
+	ul.containerHeader, ul.containerSummaryHead, ul.lectureSummary li, ul.lectureSummaryBig li 
+	{
+		width: 100%;
+	}
+
+	/* This is the Resources Head */
+	ul.lectureSummaryHead li:nth-child(3)
+	{
+		right: -1%;
+	}
+
+	/* This is the Video Lectures Head */
+	ul.lectureSummaryHead li:nth-child(4)
+	{
+		right: 2.2%;
+	}
+
+	div.containerItem
+	{
+		width: 97%;
+	}
+
+	ul.eventsList
+	{
+		margin: 0px;
+	}
+
+	#sideMenuBar
+	{
+		width: 270px;
+		height: 100%;
+		font-size: 24px;
+		background-color: #E8DDCB;
+		overflow: hidden;
+		position: absolute;
+		left: -270px;
+	    z-index: 6;
+	    -webkit-transition: left 0.5s;
+		-moz-transition: left 0.5s;
+		-o-transition: left 0.5s;
+		transition: left 0.5s;
+	}	
+
+	/* This is for hiding the scroll bar in a smaller screen size */
+	#sideMenuScroller
+	{
+		width: 290px;
+		overflow-y: scroll;
+		/* This is for smooth elastic scrolling in touch devices*/
+		-webkit-overflow-scrolling: touch;
+	}
+
+	input#searchBoxText
+	{
+		font-size: 24px;
+	}
+
+	img#searchBoxIcon
+	{
+		left: 83%;
+	}
+
+	#sideMenuBar ul
+	{
+		width: 190px;
+	}
+
+	#sideMenuBar li
+	{
+		margin-bottom: 4px;
+	}
+
+	.box1, .box2, .box3
+	{
+		width: 6px;
+	}
+
+	#container
+	{
+		width: 100%;
+		border-style: none;
+	}
+	/* This is to align the top nav bar properly in small screen */
+	.topLinks
+	{
+		text-align: right;
+	}
+	/* This hides the text which appears on hover */
+	.iconText
+	{
+		display: none;
+	}
+
+	/* Adding the top left icon for side menu bar */
+	ul.containerHeader
+	{
+		min-height: 38px;
+		border-bottom-style: solid;
+		border-color: #E8DDCB;
+		border-width: 2px;
+	}
+	/* Course name in the header on right (Fundamentals of computing) */
+	ul.containerHeader li:nth-child(3)
+	{
+		width: 45%;
+		padding-right: 5px;
+	}
+	/* Course ID (ESC101 etc.) */
+	ul.containerHeader li:nth-child(2), ul.containerHeader li:nth-child(3)
+	{
+		padding-top: 5px;
+	}
+
+	/* This will make the side menu button visible */
+	div.sideMenuButton
+	{
+		display: block;
+	}
+
+	/* Changing Comments section at 850px */
+	div.shadowDiv
+	{
+		left: 10.8%;
+	}
+
+	div.commentText
+	{
+		padding: 0px 5px 40px 0px;
+	}
+
+	div.commentEditButton, div.commentReplyButton
+	{
+		height: 24px;
+		background-color: #ffffff;
+		visibility: visible;
+	}
+
+	div.innerComment div.commentEditButton, div.innerComment div.commentReplyButton
+	{
+		background-color: #F4F1ED;
+	}
+
+	div.commentEditButton
+	{
+		right: auto;
+	}
+
+	div.commentReplyButton
+	{
+		right: 20px;
+		bottom: 5px;
+	}
+}
+
+/* If width goes below 615px */
+/* Quick Find: mediaQueries615 */
+@media (max-width: 615px) {
+
+	/* Changing the Login Page at 615px */
+	img.loginPageLogo
+	{
+		left: 25%;
+	}
+	
+	div.loginButton, div.signUpButton
+	{
+		left: 30%;
+	}
+
+	div.makeBox
+	{
+		top: 5%;
+		left: 10%;
+	}
+
+	img.moveLogoTop, div.moveLoginButton, div.moveSignUpButton
+	{
+		opacity: 0;
+		z-index: -2;
+	}
+
+	/* Reducing the font size to 80% */
+	html
+	{
+		font-size: 80%;
+	}
+
+	#topNavBar li
+	{
+		width: 25%;
+		height: 50px;
+	}
+	div#topNavBar ul li:first-child
+	{
+		width: 100%;
+		height: 50px;
+		padding: 0px;
+		clear: both;
+		text-align: center;
+	}
+	#topNavBar li:first-child img
+	{
+		width: 123px;
+		height: 53px;
+		position: relative;
+	}
+	#topNavBar .topLinks img
+	{
+		width: 43px;
+		height: 43px;
+		position: absolute;
+		top: 0px;
+		left: 30%;
+	}
+	.linkBox
+	{
+		padding: 0px;
+	}
+	li.topLinks
+	{
+		text-align: left;
+	}
+
+	/* Hiding the second column */
+	div.containerSummary > ul.containerSummaryList div.containerItem span:nth-child(2), div.containerSummary > ul.containerSummaryHead li:nth-child(2),
+	div.containerSummary > div.forumsSummaryBox > ul.containerSummaryList div.containerItem span:nth-child(2)
+	{
+		display: none;
+	}
+
+	/* The above thing makes the 'Resources' header in the Home/Search page disappears, so this will make it visible again */
+	div.latestLectures > div.containerSummary > ul.containerSummaryHead li:nth-child(2)
+	{
+		display: block;
+	}
+
+	/* Special case for assignments summary, This will hide the createdOn column */
+	div.assignmentsSummary div.containerItem span:nth-child(3), div.assignmentsSummary ul.containerSummaryHead li:nth-child(3)
+	{
+		display: none;
+	}
+
+	/* Hiding Video Durations and Video Duration head from home/search page and lectures summary page */
+	div.lectureInfoBoxLengthInMiddle, .latestLectures ul.containerSummaryHead li:nth-child(3), 
+	div.lectureInfoBoxLength , ul.lectureSummaryHead li:nth-child(4)
+	{
+		display: none;
+	}
+
+	/* Setting a Max width so that the text does not overflow */
+	div.lectureInfoBoxText
+	{
+		max-width: 88%;
+	}
+
+	div.lectureInfoBoxResources
+	{
+		background-color: #ffffff;
+	}
+
+	div.lectureInfoBoxResources img
+	{
+		width: 28px;
+		margin: 0px;
+		margin-right: 7%;
+	}
+
+	div.lectureResourcesDialogBox span
+	{
+		max-width: 210px;
+	}
+
+	/* This changes the hover effect */
+	ul.lectureSummary a:hover + div.lectureInfoBoxResources, ul.lectureSummaryBig a:hover + div.lectureInfoBoxResources
+	{
+		background-color: #ffffff;
+	}
+
+	
+	ul.containerHeader li:nth-child(2)
+	{
+		width: 20%;
+	}
+
+	/* Course name in the header on right (Fundamentals of computing) */
+	ul.containerHeader li:nth-child(3)
+	{
+		width: 60%;
+	}
+
+	div.containerItem
+	{
+		width: 97%;
+		min-height: 20px;
+	}
+
+	/* Events Page */
+
+	div.eventBody
+	{
+		width: 100%;
+		margin-bottom: 20px;
+		top: 7px;
+	}
+
+	div.eventBody hr
+	{
+		display: none;
+	}
+
+	div.eventBody h5, div.eventBody span 
+	{
+		margin: 17px;
+	}
+
+	div.eventDateTime
+	{
+		width: 100%;
+		overflow: hidden;
+	    position: relative;
+	}
+
+	div.eventYear
+	{
+		font-size: 1rem;
+		position: relative;
+	    left: -6px;
+	    top: 9px;
+	}
+
+	div.eventMonth
+	{
+		padding: 3px 21px;
+		font-size: 1.8rem;
+	    position: relative;
+	    left: -12px;
+	}
+
+	div.eventDay
+	{
+		margin: 0px;
+		font-size: 2.2rem;
+		position: absolute;
+    	left: 114px;
+	}
+
+	div.eventTime
+	{
+		position: absolute;
+	    right: -25px;
+	    top: 3px;
+	}
+
+	/* Changing dimensions of dialog boxes (overlays) */
+	div.dialogContents
+	{
+		width: auto;
+		bottom: 0px;
+		right: 0px;
+		/* !important makes them highest priority */
+		top: 0px !important;
+		left: 0px !important;
+	}
+
+	/* Changing the Lecture Page */
+
+	/* This is the lecture title */
+	ul.containerLowerHeader li:first-child
+	{
+		width: 80%;
+	}
+	
+	ul.containerLowerHeader li:last-child
+	{
+		font-size: 13px;
+		margin-top: 5px;
+		padding-left: 6px;
+		float: left;
+		text-align: left;
+	}
+
+	div.lectureResourcesBox
+	{
+		position: absolute;
+		top: 170px;
+		right: 8px;
+	}
+
+	div.lectureResourcesBox img
+	{
+		width: 30px;
+		right: 8px;
+	}
+
+	div.lectureVideoBox
+	{
+		width: 100%;
+		height: 400px;
+		margin-left: 0px;
+	}
+
+	div.videoElement
+	{
+		height: 380px;
+	}
+
+	div.lectureQuestionsAndComments
+	{
+		width: 98%;
+		font-size: 18px;
+		margin-bottom: 5px;
+		margin-left: 5px;
+	}
+
+	div.commentPostButton
+	{
+		height: 20px;
+		position: absolute;
+		top: auto;
+		bottom: 10px;
+		right: 37%;
+	}
+
+	/* Changing Comments section at 615px */
+	div.commentsSection
+	{
+		margin-bottom: 50px;
+	}
+
+	div.commentBodyBox
+	{
+		border-width: 1px;
+	}
+
+	div.shadowDiv
+	{
+		left: 10.4%;
+		right: 2%;
+	}
+
+	span.noComments
+	{
+		display: block;
+	}
+
+	div.userPic
+	{
+		border-width: 1px;
+	}
+
+	/* Forum Page */
+	div.forumTopicBody
+	{
+		width: 84%;
+		margin-bottom: 0px;
+		padding-bottom: 20px;
+	}
+
+	div.forumTopicDescription
+	{
+		padding-right: 10px;
+	}
+
+	/* Wiki Page */
+	div.wikiEditButton
+	{
+		width: 50px;
+		height: 20px;
+	}
+
+	div.quillContainerWrapper
+	{
+		width: 99%;
+	}
+
+	div.announcementBody
+	{
+		width: 82%;
+	}
+}
+
+/* If width goes below 400px */
+/* Quick Find: mediaQueries400 */
+@media (max-width: 400px) {
+	
+	/* Changing the Login Page at 615px */
+	img.loginPageLogo
+	{
+		left: 15px;
+	}
+	
+	div.loginButton, div.signUpButton
+	{
+		left: 60px;
+	}
+
+	div.makeBox 
+	{
+		width: 94%;
+		height: 94%;
+		top: 0px;
+		left: 0px;
+	}
+
+	/* Aligning top links correctly */
+	li.topLinks
+	{
+		left: -2%;
+	}
+
+	/* Course name in the header on right (Fundamentals of computing) */
+	ul.containerHeader li:nth-child(3)
+	{
+		width: 30%;
+		padding-top: 0px;
+		font-size: 15px
+	}
+
+	/* Changing the size of the video box */
+	div.lectureVideoBox
+	{
+		height: 200px;
+	}
+
+	div.videoElement
+	{
+		height: 180px;
+	}
+
+	/* Comments section at 400px */
+	div.commentsSection
+	{
+		min-width: 310px;
+	}
+
+	div.shadowDiv
+	{
+		left: 45px;
+	}
+
+	div.userPicWrapper
+	{
+		width: 30px;
+		padding-top: 30px;
+	}
+
+	div.commentBodyBox
+	{
+		width: 85%;
+	}
+
+	 div.innerCommentBodyBox
+	 {
+	 	width: 84.7%;
+	 }
+
+	 /* Changing Dialog Box */
+	 div.dialogTitle span
+	 {
+	 	left: 5%;
+	 }
+
+	 /* Forum Page */
+	div.forumTopicBody
+	{
+		width: 79%;
+	}
+
+	div.announcementBody
+	{
+		width: 76%;
+	}
+}
+
+/* Animation Classes */
+/* Quick Find: animationClasses */
+ul.popHeader
+{
+	position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    border-width: 0px;
+    z-index: 5;
+}
+
+/* This class is for sideMenuButton */
+div.slideRight
+{
+	z-index: 7;
+	left: 270px;
+}
+
+#sideMenuBar.slideRight
+{
+	left: 0px;
+}
+
+#sideMenuBar.shadow
+{
+	-moz-box-shadow:    3px 3px 5px 0px #000000;
+	-webkit-box-shadow: 3px 3px 5px 0px #000000;
+	box-shadow:         3px 3px 5px 0px #000000;
+}
+
+#sideMenuBar.fixedSidebar
+{
+	position: fixed;
+	top: 0px;
+}
+
+div.crossFirstBar
+{
+	-webkit-transform:  rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+	top: 9px;
+}
+
+div.crossSecondBar
+{
+	opacity: 0;
+}
+
+div.crossThirdBar
+{
+	-webkit-transform:  rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+	top: -11px;
+}
+
+
+/* =============Css added by sunil=============== */
+
+/* This class is for syllabus */
+
+ .syllabusContainer
+{
+    padding-left: 1.6%;
+    padding-top: 1.3%;
+    color: #64908a;
+}
+.syllabusTitle
+{
+	font-size: 24px;
+}
+span.syllabusBody li
+{
+	font-size: 16px;
+    list-style-type: circle;
+    list-style-position: inside;
+}
+
+/* This class is for Schedule */
+
+.scheduleContainer
+{
+    padding-left: 1.6%;
+    padding-top: 1.3%;
+    color: #64908a;
+}
+.scheduleTitle
+{
+	font-size: 24px;
+}
+.syllabusBody
+{
+	font-size: 14px;
+}
+
+
+

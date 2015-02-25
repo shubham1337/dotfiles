@@ -1,0 +1,12 @@
+[
+    {
+        "nid": 1,
+        "title": "Labs are compulsory to attend",
+        "date": "17/05/2014 - 13:56"
+    },
+    {
+        "nid": 2,
+        "title": "The course is now live!",
+        "date": "24/05/2014 - 09:00"
+    }
+]

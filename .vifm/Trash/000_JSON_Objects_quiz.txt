@@ -1,0 +1,22 @@
+[
+    {
+        "title": "<p>This is a testing question</p>\r\n",
+        "type": "truefalse",
+        "options":[{aid:0,value:'false'},{aid:1,value:'true'}],
+        "qid": 1768,
+        "quiz_id": 839,
+        "_id": "53baed6c4755ec5c1baef282"
+    },
+    {
+        "title": "<p>This course is about test</p>\r\n",
+        "type": "multichoice",
+        "options": [
+        {"aid":5,"value":"<p>Programming in C</p>"},
+        {"aid":6,"value":"<p>Problem solving with a computer</p>"},
+        {"aid":7,"value":"<p>Building web-sites</p>"},
+        {"aid":8,"value":"<p>Java programming</p>"}],
+        "qid": 840,
+        "quiz_id": 839,
+        "_id": "53baed6c4755ec5c1baef284"
+    }
+]

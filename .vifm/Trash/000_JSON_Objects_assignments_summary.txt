@@ -1,0 +1,16 @@
+[
+    {
+        "nid": 1,
+        "title": "Assignment 1",
+        "createdOn": "17/05/2014",
+        "dueOn": "24/05/2014",
+        "path": "this is a path"
+    },
+    {
+        "nid": 2,
+        "title": "Assignment 2",
+        "createdOn": "17/05/2014",
+        "dueOn": "24/05/2014",
+        "path": "this is a path"
+    }
+]
