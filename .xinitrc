@@ -16,6 +16,9 @@ parcellite -d -n &
 # Battery low notification
 ~/startup_scripts/batteryd.sh &
 
+# Eye fitness
+~/startup_scripts/eye_notify.sh &
+
 # Changing the wallpaper
 feh --bg-fill ~/Arch\ Wallpapers/7753-arch-linux-1920x1080-computer-wallpaper.png
 

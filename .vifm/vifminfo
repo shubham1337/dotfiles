@@ -6,9 +6,9 @@
 	../
 1406580540
 'a
-	/home/shubham/Programming/jekyll_blog
-	_includes/
-1423805508
+	/home/shubham
+	Arch Wallpapers/
+1426939700
 'b
 	/home/shubham/bin/
 	../
@@ -23,7 +23,7 @@
 1406580540
 
 # TUI:
-ar
+al
 q0
 v2
 ov
@@ -32,48 +32,6 @@ l2
 r2
 
 # Left window history (oldest to newest):
-d/home/shubham/myhome/Users/rsharmaindia/Documents
-	Vuze Downloads/
-29
-d/home/shubham/myhome/Users/rsharmaindia/Documents/Vuze Downloads
-	../
-0
-d/home/shubham/myhome/Users/rsharmaindia/Documents
-	../
-0
-d/home/shubham/myhome/Users/rsharmaindia
-	Documents/
-9
-d/home/shubham/myhome/Users/rsharmaindia/Documents
-	Software Installers/
-26
-d/home/shubham/myhome/Users/rsharmaindia/Documents/Software Installers
-	Various Utilities/
-9
-d/home/shubham/myhome/Users/rsharmaindia/Documents/Software Installers/Various Utilities
-	../
-0
-d/home/shubham/myhome/Users/rsharmaindia/Documents/Software Installers
-	Windows Essentials/
-12
-d/home/shubham/myhome/Users/rsharmaindia/Documents/Software Installers/Windows Essentials
-	../
-0
-d/home/shubham/myhome/Users/rsharmaindia/Documents/Software Installers
-	Web Browsers/
-11
-d/home/shubham/myhome/Users/rsharmaindia/Documents/Software Installers/Web Browsers
-	../
-0
-d/home/shubham/myhome/Users/rsharmaindia/Documents/Software Installers
-	Virtual Machine Sims/
-10
-d/home/shubham/myhome/Users/rsharmaindia/Documents/Software Installers/Virtual Machine Sims
-	../
-0
-d/home/shubham/myhome/Users/rsharmaindia/Documents/Software Installers
-	Various Utilities/
-9
 d/home/shubham/myhome/Users/rsharmaindia/Documents/Software Installers/Various Utilities
 	../
 0
@@ -330,68 +288,50 @@ d/home
 	shubham/
 1
 d/home/shubham/Programming/jekyll_blog
-	_site/
+	_sass/
+4
+d/home/shubham/Programming
+	java_code/
+13
+d/home/shubham
+	workspace/
+21
+d/home/shubham/workspace
+	../
+0
+d/home/shubham
+	workspace/
+21
+d/home/shubham/workspace
+	../
+0
+d/home/shubham
+	Arch Wallpapers/
+1
+d/home/shubham/Arch Wallpapers
+	../
+0
+d/home/shubham
+	Music/
+6
+d/home/shubham/Music
+	../
+0
+d/home/shubham
+	Music/
+6
+d/home/shubham/Music
+	Technologies-for-Wellbeing-Ishakriya.com-Intro-Meditation.mp3
+2
+d/home/shubham
+	.vifm/
+21
+d/home/shubham/.vifm
+	vifmrc
 5
 d
 
 # Right window history (oldest to newest):
-D/home/shubham
-	mookit/
-12
-D/home/shubham/mookit
-	js/
-3
-D/home/shubham/mookit/js
-	libs/
-1
-D/home/shubham/mookit/js/libs
-	../
-0
-D/home/shubham/mookit/js
-	../
-0
-D/home/shubham/mookit
-	css/
-2
-D/home/shubham/mookit/css
-	../
-0
-D/home/shubham/mookit
-	js/
-5
-D/home/shubham/mookit/js
-	libs/
-1
-D/home/shubham/mookit/js/libs
-	../
-0
-D/home/shubham/mookit/js
-	libs/
-1
-D/home/shubham/mookit
-	js/
-6
-D/home/shubham
-	MooKit/
-5
-D/home
-	shubham/
-1
-D/home/shubham
-	temp/
-27
-D/home/shubham/temp
-	../
-0
-D/home/shubham
-	tmp/
-30
-D/home/shubham/tmp
-	npm-24064-LjpM5FHc/
-1
-D/home/shubham/tmp/npm-24064-LjpM5FHc
-	../
-0
 D/home/shubham/tmp
 	npm-24064-LjpM5FHc/
 1
@@ -576,8 +516,122 @@ D/home
 	shubham/
 1
 D/home/shubham
-	CyberSecurity.pdf
+	../
+0
+D/home
+	shubham/
+1
+D/home/shubham
+	Arch Wallpapers/
+1
+D/home/shubham/Arch Wallpapers
+	Arch Linux Wallpapers (4).jpg
+3
+D/home/shubham
+	Downloads/
+3
+D/home/shubham/Downloads
+	mooconmooc/
+15
+D/home/shubham/Downloads/mooconmooc
+	emoticons/
+2
+D/home/shubham/Downloads/mooconmooc/emoticons
+	../
+0
+D/home/shubham
+	workspace/
 21
+D/home/shubham/workspace
+	Quiz/
+3
+D/home/shubham/workspace/Quiz
+	assets/
+1
+D/home/shubham/workspace/Quiz/assets
+	www/
+1
+D/home/shubham/workspace/Quiz/assets/www
+	css/
+1
+D/home/shubham/workspace/Quiz/assets/www/css
+	../
+0
+D/home/shubham/workspace/Quiz/assets/www
+	css/
+1
+D/home/shubham/workspace/Quiz/assets/www/css
+	../
+0
+D/home/shubham/workspace/Quiz/assets/www
+	css/
+1
+D/home/shubham/workspace/Quiz/assets/www/css
+	../
+0
+D/home/shubham/workspace/Quiz/assets/www
+	css/
+1
+D/home/shubham/workspace/Quiz/assets/www/css
+	../
+0
+D/home/shubham/workspace/Quiz/assets/www
+	css/
+1
+D/home/shubham/workspace/Quiz/assets/www/css
+	../
+0
+D/home/shubham/workspace/Quiz/assets/www
+	css/
+1
+D/home/shubham/workspace/Quiz/assets/www/css
+	../
+0
+D/home/shubham/workspace/Quiz/assets/www
+	css/
+1
+D/home/shubham/workspace/Quiz/assets/www/css
+	../
+0
+D/home/shubham/workspace/Quiz/assets/www
+	../
+0
+D/home/shubham/workspace/Quiz/assets
+	www/
+1
+D/home/shubham/workspace/Quiz/assets/www
+	../
+0
+D/home/shubham/workspace/Quiz/assets
+	www/
+1
+D/home/shubham/workspace/Quiz
+	assets/
+1
+D/home/shubham/workspace
+	Quiz/
+3
+D/home/shubham
+	workspace/
+21
+D/home
+	shubham/
+1
+D/
+	bin/
+0
+D/bin
+	../
+0
+D/
+	home/
+6
+D/home
+	shubham/
+1
+D/home/shubham
+	../
+0
 D
 
 # Command line history (oldest to newest):
@@ -610,6 +664,10 @@ D
 :color mytheme
 :color my_theme
 :colorscheme solarized-dark
+:filter
+:vim 
+:!vim
+:view
 :q
 
 # Search history (oldest to newest):
@@ -621,6 +679,7 @@ D
 /myho
 /Use
 /jek
+/vifm
 
 # Prompt history (oldest to newest):
 pO

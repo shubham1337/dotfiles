@@ -103,7 +103,7 @@ inoremap jk <esc>
 
 function! EnterCurly()
 	if getline('.')[col('.')-1] == '}'
-		execute "normal! O	"
+		execute "normal! O "
 	endif
 endfunction
 inoremap <Enter> <Enter><c-o>:<c-u>call EnterCurly()<cr>
@@ -141,22 +141,11 @@ onoremap i, :<c-u>execute "normal! ?\[({\\[,]\rlv/\[)}\\],]\rh"<cr>
 
 function! ParamTextObject()
 	execute "normal! ?\[({\\[,]\rlv/\[)}\\],]\r"
-	if getline('.')[col('.')-1] == ','
-		"execute "normal! l"
-	elseif getline('.')[col('.')-1] == ')' || getline('.')[col('.')-1] == '}' || getline('.')[col('.')-1] == ']'
-		execute "normal! oh"
+	if getline('.')[col('.')-1] == ')' || getline('.')[col('.')-1] == '}' || getline('.')[col('.')-1] == ']'
+		execute "normal! hoh"
 	endif
 endfunction
 onoremap a, :<c-u>call ParamTextObject()<cr>
 
 " text object for a code block INCLUDING the function/class Name and params
 onoremap af :<c-u>execute "normal! $]}V%^"<cr>
-
-"Function: Fuckk
-"Desc: description
-"
-"Arguments:
-"
-function! Fuckk(hi, hhaha, josdf)
-    
-endfunction

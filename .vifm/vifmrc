@@ -153,7 +153,8 @@ command vgrep vim "+grep %a"
 " program.
 
 " Pdf
-filetype *.pdf zathura %f,apvlv %f,xpdf %f
+" filetype *.pdf zathura %f,apvlv %f,xpdf %f
+filetype *.pdf evince %f
 fileview *.pdf pdftotext -nopgbrk %c -
 
 " PostScript
@@ -164,22 +165,28 @@ filextype *.djvu apvlv %f
 
 " Audio
 filetype *.wav,*.mp3,*.flac,*.ogg,*.m4a
-       \ {Play using ffplay}
-       \ ffplay %c,
-       \ {Play using MPlayer}
-       \ mplayer %f,
+" \ {Play using ffplay}
+" \ ffplay %c,
+       \ {Play using vlc}
+       \ vlc %f,
 fileviewer *.mp3 mp3info
 
 " Video
 filextype *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.vob,*.flv
-        \ {View using ffplay}
-        \ ffplay -fs %c,
-        \ {View using Dragon}
-        \ dragon %f,
-        \ {View using mplayer}
-        \ mplayer %f,
+        \ {View using vlc}
+        \ vlc %f,
 fileviewer *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.vob
          \ ffprobe -pretty %c 2>&1
+
+" filextype *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.vob,*.flv
+"         \ {View using ffplay}
+"         \ ffplay -fs %c,
+"         \ {View using Dragon}
+"         \ dragon %f,
+"         \ {View using mplayer}
+"         \ mplayer %f,
+" fileviewer *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.vob
+"          \ ffprobe -pretty %c 2>&1
 
 " Web
 filetype *.html,*.htm links,mozilla,uzbl-browser %f %i &
@@ -189,10 +196,10 @@ filetype *.o nm %f | less
 
 " Image
 filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
-        \ {View in sxiv}
-        \ sxiv,
-        \ {View in gpicview}
-        \ gpicview %c,
+" \ {View in sxiv}
+" \ sxiv,
+        \ {View in feh}
+        \ feh %c,
 fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm convert -identify %f -verbose /dev/null
 
 " MD5
@@ -278,8 +285,9 @@ set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,
 nmap s :shell<cr>
 nmap S :sort<cr>
 nmap w :view<cr>
-nmap o :!gvim --remote-tab-silent %f<cr>
-nmap O :!gvim %f<cr>
+" nmap o :!vim --remote-tab-silent %f<cr>
+nmap o :!vim %f<cr>
+nmap O :!vim %f<cr>
 
 " Open file in the background using its default program
 nmap gb :file &<cr>l
