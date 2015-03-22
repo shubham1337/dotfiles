@@ -6,17 +6,29 @@
 	../
 1406580540
 'a
-	/home/shubham
-	Arch Wallpapers/
-1426939700
+	/home/shubham/Downloads
+	../
+1427003708
 'b
 	/home/shubham/bin/
 	../
 1406625717
-'h
-	/home/shubham/
+'d
+	/home/shubham/Downloads
 	../
-1406625717
+1427003767
+'h
+	/home/shubham
+	../
+1427020406
+'m
+	/home/shubham/mookit_work
+	../
+1427003767
+'p
+	/home/shubham/Programming
+	../
+1427003767
 'z
 	/home/shubham/.vifm
 	../
@@ -32,78 +44,6 @@ l2
 r2
 
 # Left window history (oldest to newest):
-d/home/shubham/myhome/Users/rsharmaindia/Documents/Software Installers/Various Utilities
-	../
-0
-d/home/shubham/myhome/Users/rsharmaindia/Documents/Software Installers
-	Mobile Utilities/
-3
-d/home/shubham/myhome/Users/rsharmaindia/Documents/Software Installers/Mobile Utilities
-	../
-0
-d/home/shubham/myhome/Users/rsharmaindia/Documents/Software Installers
-	Language Compilers and IDEs/
-2
-d/home/shubham/myhome/Users/rsharmaindia/Documents/Software Installers/Language Compilers and IDEs
-	../
-0
-d/home/shubham/myhome/Users/rsharmaindia/Documents/Software Installers
-	Anti-Virus Softwares/
-1
-d/home/shubham/myhome/Users/rsharmaindia/Documents/Software Installers/Anti-Virus Softwares
-	../
-0
-d/home/shubham/myhome/Users/rsharmaindia/Documents/Software Installers
-	Mobile Utilities/
-3
-d/home/shubham/myhome/Users/rsharmaindia/Documents/Software Installers/Mobile Utilities
-	../
-0
-d/home/shubham/myhome/Users/rsharmaindia/Documents/Software Installers
-	Multimedia Software/
-4
-d/home/shubham/myhome/Users/rsharmaindia/Documents/Software Installers/Multimedia Software
-	../
-0
-d/home/shubham/myhome/Users/rsharmaindia/Documents/Software Installers
-	Windows Essentials/
-12
-d/home/shubham/myhome/Users/rsharmaindia/Documents/Software Installers/Windows Essentials
-	../
-0
-d/home/shubham/myhome/Users/rsharmaindia/Documents/Software Installers
-	Web Browsers/
-11
-d/home/shubham/myhome/Users/rsharmaindia/Documents/Software Installers/Web Browsers
-	../
-0
-d/home/shubham/myhome/Users/rsharmaindia/Documents/Software Installers
-	Virtual Machine Sims/
-10
-d/home/shubham/myhome/Users/rsharmaindia/Documents/Software Installers/Virtual Machine Sims
-	../
-0
-d/home/shubham/myhome/Users/rsharmaindia/Documents/Software Installers
-	Various Utilities/
-9
-d/home/shubham/myhome/Users/rsharmaindia/Documents/Software Installers/Various Utilities
-	../
-0
-d/home/shubham/myhome/Users/rsharmaindia/Documents/Software Installers
-	System Maintenance Softwares/
-8
-d/home/shubham/myhome/Users/rsharmaindia/Documents/Software Installers/System Maintenance Softwares
-	../
-0
-d/home/shubham/myhome/Users/rsharmaindia/Documents/Software Installers
-	Shells/
-7
-d/home/shubham/myhome/Users/rsharmaindia/Documents/Software Installers/Shells
-	../
-0
-d/home/shubham/myhome/Users/rsharmaindia/Documents/Software Installers
-	Shells/
-7
 d/home/shubham/myhome
 	../
 0
@@ -329,6 +269,81 @@ d/home/shubham
 d/home/shubham/.vifm
 	vifmrc
 5
+d/home/shubham
+	mookit_work/
+13
+d/home/shubham/mookit_work
+	mooky_2.0/
+25
+d/home/shubham
+	eBooks/
+10
+d/home/shubham/eBooks
+	SedChart.pdf
+3
+d/home/shubham
+	eBooks/
+10
+d/home
+	shubham/
+1
+d/home/shubham
+	Music/
+6
+d/home/shubham/Music
+	Technologies-for-Wellbeing-Ishakriya.com-Intro-Meditation.mp3
+2
+d/home/shubham
+	.vifm/
+20
+d/home/shubham/.vifm
+	vifmrc
+5
+d/home/shubham
+	Music/
+6
+d/home/shubham/Music
+	Technologies-for-Wellbeing-Ishakriya.com-Intro-Meditation.mp3
+2
+d/home/shubham
+	Downloads/
+3
+d/home/shubham/Downloads
+	mooconmooc/
+20
+d/home/shubham/Downloads/mooconmooc
+	css/
+1
+d/home/shubham/Downloads
+	mookit3_designs/
+21
+d/home/shubham/Downloads/mookit3_designs
+	feh_011818_000001_DiscGD-01.png
+3
+d/home/shubham/Downloads
+	38_Ways_To_Win_An_Argument/
+1
+d/home/shubham
+	.vifm/
+13
+d/home/shubham/.vifm
+	colors/
+2
+d/home/shubham
+	../
+0
+d/home/shubham/Programming
+	../
+0
+d/home/shubham/mookit_work
+	../
+0
+d/home/shubham/Downloads
+	../
+0
+d/home/shubham
+	Downloads/
+3
 d
 
 # Right window history (oldest to newest):
@@ -636,7 +651,6 @@ D
 
 # Command line history (oldest to newest):
 :colorscheme solarized
-:colorscheme Default
 :h
 :mkdir mookit_work
 :mkdir Coding
@@ -656,18 +670,27 @@ D
 :!feh forums/150108/
 :!urxvt forums/
 :!urxvt
-:colorscheme desert
-:colorscheme matrix
 :color zenburn
-:colorscheme my_theme
-:colorscheme mytheme
-:color mytheme
-:color my_theme
-:colorscheme solarized-dark
 :filter
 :vim 
 :!vim
 :view
+:!evince %f
+:colorscheme Default
+:colorscheme solarized-dark
+:colorscheme desert
+:colorscheme matrix
+:colorscheme my_theme
+:colorscheme mytheme
+:colorscheme zenburn
+:color my_theme
+:color mytheme
+:colors $LS_COLORS
+:mark ~/Downloads a
+:mark ~/Downloads
+:mark --help
+:mark
+:mark a /home/shubham/Downloads
 :q
 
 # Search history (oldest to newest):
@@ -679,6 +702,7 @@ D
 /myho
 /Use
 /jek
+/moo
 /vifm
 
 # Prompt history (oldest to newest):
@@ -690,7 +714,6 @@ pindex_form_downloads.html
 # Local filter history (oldest to newest):
 
 # Registers:
-""/home/shubham/myhome/Users/rsharmaindia/Documents/Games/GTA San Andreas PC Game (Highly compressed ) @ Only By THE RAIN
 
 # Directory stack (oldest to newest):
 

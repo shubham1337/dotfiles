@@ -168,13 +168,13 @@ filetype *.wav,*.mp3,*.flac,*.ogg,*.m4a
 " \ {Play using ffplay}
 " \ ffplay %c,
        \ {Play using vlc}
-       \ vlc %f,
+       \ vlc %f &,
 fileviewer *.mp3 mp3info
 
 " Video
 filextype *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.vob,*.flv
         \ {View using vlc}
-        \ vlc %f,
+        \ vlc %f &,
 fileviewer *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.vob
          \ ffprobe -pretty %c 2>&1
 
@@ -199,7 +199,7 @@ filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
 " \ {View in sxiv}
 " \ sxiv,
         \ {View in feh}
-        \ feh %c,
+        \ feh %c &,
 fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm convert -identify %f -verbose /dev/null
 
 " MD5
@@ -321,3 +321,10 @@ nmap <f5> :copy<cr>
 nmap <f6> :move<cr>
 nmap <f7> :mkdir<space>
 nmap <f8> :delete<cr>
+
+colorscheme solarized-dark
+
+mark d /home/shubham/Downloads
+mark h /home/shubham
+mark p /home/shubham/Programming
+mark m /home/shubham/mookit_work
