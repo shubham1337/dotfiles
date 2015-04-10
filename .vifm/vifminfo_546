@@ -20,7 +20,7 @@
 'h
 	/home/shubham
 	../
-1428694107
+1428164499
 'm
 	/home/shubham/mookit_work
 	../
@@ -346,11 +346,98 @@ d/home/shubham
 	Mixes/
 5
 d/home/shubham/Mixes
-	Keys N Krates - All The Time (Tove Lo Flip)-qn9AeUK-jG4.m4a
-3
+	Clams Casino - I'm God-FJJ8hWDXWGs.m4a
+1
 d
 
 # Right window history (oldest to newest):
+D/home/shubham
+	Music/
+5
+D/home/shubham/Music
+	../
+0
+D/home/shubham
+	blog/
+7
+D/home/shubham/blog
+	../
+0
+D/home/shubham
+	Programming/
+6
+D/home/shubham/Programming
+	../
+0
+D/home/shubham
+	Movies/
+5
+D/home/shubham/Movies
+	../
+0
+D/home/shubham
+	Programming/
+7
+D/home/shubham/Programming
+	../
+0
+D/home/shubham
+	mookit_work/
+9
+D/home/shubham/mookit_work
+	../
+0
+D/home/shubham
+	mookit_work/
+9
+D/home/shubham/mookit_work
+	MooKit/
+4
+D/home/shubham
+	Programming/
+7
+D/home/shubham/Programming
+	../
+0
+D/home/shubham
+	mookit_work/
+9
+D/home/shubham/mookit_work
+	Lato/
+3
+D/home/shubham
+	Programming/
+7
+D/home/shubham/Programming
+	../
+0
+D/home/shubham
+	Programming/
+7
+D/home/shubham/Programming
+	../
+0
+D/home/shubham
+	Programming/
+7
+D/home
+	shubham/
+1
+D/home/shubham
+	Programming/
+7
+D/home/shubham/Programming
+	../
+0
+D/home/shubham
+	mookit_work/
+9
+D/home/shubham/mookit_work
+	Lato/
+3
+D/home/shubham
+	Programming/
+7
 D/home/shubham/Programming
 	angular_app/
 1
@@ -562,95 +649,8 @@ D/home
 	shubham/
 1
 D/home/shubham
-	.vifm/
-30
-D/home/shubham/.vifm
-	vifmrc
-10
-D/home/shubham
-	.vifm/
-30
-D/home
-	shubham/
-1
-D/home/shubham
-	eBooks/
-12
-D/home/shubham/eBooks
 	../
 0
-D/home/shubham
-	../
-0
-D/home/shubham/mookit_work
-	../
-0
-D/home/shubham
-	.vifm/
-24
-D/home/shubham/.vifm
-	vifmrc
-10
-D/home/shubham/myhome/Users/rsharmaindia
-	eBooks/
-16
-D/home/shubham/myhome/Users/rsharmaindia/eBooks
-	Technical/
-5
-D/home/shubham/myhome/Users/rsharmaindia/eBooks/Technical
-	General Computer Books/
-2
-D/home/shubham/myhome/Users/rsharmaindia/eBooks/Technical/General Computer Books
-	../
-0
-D/home/shubham/myhome/Users/rsharmaindia/eBooks/Technical
-	Linux/
-3
-D/home/shubham/myhome/Users/rsharmaindia/eBooks/Technical/Linux
-	learning_the_vi_and_vim_editors_seventh_edition.pdf
-6
-D/home/shubham
-	.conkyrc
-30
-D/home/shubham/git/dotfiles
-	.conkyrc
-7
-D/home/shubham/git
-	dotfiles/
-1
-D/home/shubham
-	temp/
-19
-D/home/shubham/temp
-	../
-0
-D/home/shubham
-	Downloads/
-3
-D/home/shubham/Downloads
-	Citizenfour.2014.HDRiP.avi/
-3
-D/home/shubham
-	temp/
-19
-D/home/shubham/temp
-	Movies/
-5
-D/home/shubham/temp/Movies
-	22 Jump Street (2014)/
-1
-D/home/shubham/temp
-	Movies/
-5
-D/home/shubham
-	temp/
-19
-D/home
-	shubham/
-1
-D/home/shubham
-	temp/
-19
 D
 
 # Command line history (oldest to newest):
@@ -714,8 +714,10 @@ D
 /jek
 /moo
 /us
+/eboo
 /reb
 /work
+/vifm
 /min
 /pdf
 /mind
@@ -724,11 +726,6 @@ D
 /mix
 /vim
 /haskell
-/vifm
-/eboo
-/conk
-/temp
-/ci
 
 # Prompt history (oldest to newest):
 pO
@@ -739,7 +736,6 @@ pindex_form_downloads.html
 # Local filter history (oldest to newest):
 
 # Registers:
-""/home/shubham/Downloads/Citizenfour.2014.HDRiP.avi
 
 # Directory stack (oldest to newest):
 

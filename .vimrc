@@ -33,9 +33,6 @@ syntax on "for syntax highlighting
 
 "nnoremap ,, :noh<return><esc>
 
-" for Auto complete plugin NeoComplCache
-let g:neocomplcache_enable_at_startup = 1
-
 
 " my Leader key
 let mapleader = ','
@@ -64,7 +61,7 @@ cmap w!! w !sudo tee % >/dev/null
 " Adding lines above and below
 nmap <leader>o mzo<esc>`z
 nmap <leader>O mzO<esc>`z
-nmap <leader>J mzi<enter><esc>`z
+nmap <leader>J mzi<cr><esc>`z
 
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
@@ -106,7 +103,7 @@ function! EnterCurly()
 		execute "normal! O "
 	endif
 endfunction
-inoremap <Enter> <Enter><c-o>:<c-u>call EnterCurly()<cr>
+inoremap <cr> <cr><c-o>:<c-u>call EnterCurly()<cr>
 
 noremap <leader><tab> <C-w><C-w>
 noremap <C-k> <esc>:bprevious<cr>
@@ -157,5 +154,4 @@ nnoremap \M :set noexpandtab tabstop=8 softtabstop=4 shiftwidth=4<CR>
 nnoremap \m :set expandtab tabstop=2 shiftwidth=2 softtabstop=2<CR>
 
 nnoremap \w :setlocal wrap!<CR>:setlocal wrap?<CR>
-
 

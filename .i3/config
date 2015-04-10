@@ -8,8 +8,11 @@
 # i3 config file (v4)
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
+#
+# Win key is Mod4
+# Alt key is Mod1
 
-set $mod Mod1
+set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -227,8 +230,8 @@ client.unfocused 		#384048 #384048 #e8e8d3 #700009
 
 # Startup Apps
 exec --no-startup-id urxvt
-exec --no-startup-id i3-msg 'exec firefox'
-# exec --no-startup-id i3-msg 'workspace 4; exec firefox; workspace 5; exec thunderbird; workspace 1'
+#exec --no-startup-id i3-msg 'exec firefox'
+exec --no-startup-id i3-msg 'workspace 4; exec firefox; workspace 5; exec thunderbird; workspace 1'
 
 
 

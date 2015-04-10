@@ -62,7 +62,7 @@ TEXT
 },
 {
 	"full_text" : "Temp: ${acpitemp}",
-	"color" : ${if_match ${acpitemp}<50}"\#597bc5"${else}"\#cf6a4c"${endif} 
+	"color" : ${if_match ${acpitemp}<65}"\#597bc5"${else}"\#cf6a4c"${endif} 
 },
 { 
 	"full_text" : "RAM ${memperc}%" , 

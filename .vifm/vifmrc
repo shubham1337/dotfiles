@@ -154,7 +154,7 @@ command vgrep vim "+grep %a"
 
 " Pdf
 " filetype *.pdf zathura %f,apvlv %f,xpdf %f
-filetype *.pdf evince %f
+filetype *.pdf evince %f &
 fileview *.pdf pdftotext -nopgbrk %c -
 
 " PostScript
@@ -286,8 +286,8 @@ nmap s :shell<cr>
 nmap S :sort<cr>
 nmap w :view<cr>
 " nmap o :!vim --remote-tab-silent %f<cr>
-nmap o :!vim %f<cr>
-nmap O :!vim %f<cr>
+nmap o :!urxvt -e vim %f &<cr>
+nmap O :!urxvt -e vim %f &<cr>
 
 " Open file in the background using its default program
 nmap gb :file &<cr>l
@@ -304,7 +304,7 @@ nmap cc cw<c-u>
 nmap A cw<c-w>
 
 " Opening console in current directory
-nmap ,t :!xterm &<cr>
+nmap ,t :!urxvt &<cr>
 
 " Opening vim to edit .vifmrc
 nmap ,c :execute ':!vim $MYVIFMRC' | restart<cr>
@@ -328,3 +328,4 @@ mark d /home/shubham/Downloads
 mark h /home/shubham
 mark p /home/shubham/Programming
 mark m /home/shubham/mookit_work
+mark r /home/shubham/myhome/Users/rsharmaindia
