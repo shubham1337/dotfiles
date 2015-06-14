@@ -19,12 +19,13 @@ parcellite -d -n &
 # Eye fitness
 ~/startup_scripts/eye_notify.sh &
 
-# Changing the wallpaper
-feh --bg-fill ~/Arch\ Wallpapers/7753-arch-linux-1920x1080-computer-wallpaper.png
 
 # For unicode characters
 export LC_ALL=en_US.UTF-8
 export LANG="$LC_ALL" 
+
+# Starting PulseAudio
+/usr/bin/start-pulseaudio-x11 &
 
 # this is to start i3 at login
 i3

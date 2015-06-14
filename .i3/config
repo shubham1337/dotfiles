@@ -18,7 +18,8 @@ set $mod Mod4
 # is used in the bar {} block below.
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:DejaVu Sans Mono Book 10
+#font pango:DejaVu Sans Mono Book 10
+font pango:Droid Sans Mono 10
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # The font above is very space-efficient, that is, it looks good, sharp and
@@ -171,20 +172,23 @@ bindsym $mod+r mode "resize"
 bar {
 		status_command $HOME/bin/conky-i3bar
 		colors {
-			background #151515
-			statusline #eee8d5
-			focused_workspace #384048 #384048 #eee8d5 
-			active_workspace #cb4b16 #cb4b16 #eee8d5
-			inactive_workspace #073642 #073642 #eee8d5
+			background #2d2d2d
+			statusline #393939
+			focused_workspace   #515151 #515151 #ffffff 
+			active_workspace    #cccccc #cccccc #ffffff 
+			inactive_workspace  #999999 #999999 #ffffff 
 
-			urgent_workspace   #2f343a #900000 #ffffff
+			urgent_workspace    #f2777a #f2777a #ffffff
 		}
 }
 
 # for Multimedia keys
-bindsym XF86AudioLowerVolume exec amixer -q set Master 5- && exec notify-send -t 10 -u low -c "Music" "$(amixer get Master | grep 'Playback [0-9][0-9]')"
-bindsym XF86AudioRaiseVolume exec amixer -q set Master 5+ && exec notify-send -t 10 -u low -c "Music" "$(amixer get Master | grep 'Playback [0-9][0-9]')"
-bindsym XF86AudioMute exec $(amixer get Master | grep off > /dev/null && amixer -q set Master unmute) || amixer -q set Master mute
+#bindsym XF86AudioLowerVolume exec amixer -q set Master 5- && exec notify-send -t 10 -u low -c "Music" "$(amixer get Master | grep 'Playback [0-9][0-9]')"
+bindsym XF86AudioLowerVolume exec pactl set-sink-mute 0 false && pactl -- set-sink-volume 0 -5%
+bindsym XF86AudioRaiseVolume exec pactl set-sink-mute 0 false && pactl set-sink-volume 0 +5%
+bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
+#bindsym XF86AudioRaiseVolume exec amixer -q set Master 5+ && exec notify-send -t 10 -u low -c "Music" "$(amixer get Master | grep 'Playback [0-9][0-9]')"
+#bindsym XF86AudioMute exec $(amixer get Master | grep off > /dev/null && amixer -q set Master unmute) || amixer -q set Master mute
 bindsym XF86AudioPrev exec cmus-remote -r && exec notify-send -t 10 -u normal "$(cmus-remote -Q)"
 bindsym XF86AudioNext exec cmus-remote -n && exec notify-send -t 10 -u normal "$(cmus-remote -Q)"
 
@@ -224,14 +228,20 @@ focus_follows_mouse no
 
 # New Jellybeans colors!
 # class					border  backgr. text 	indicator
-client.focused 			#151515 #151515 #e8e8d3 #700009
-client.focused_inactive #2b5b77 #2b5b77 #e8e8d3 #700009
-client.unfocused 		#384048 #384048 #e8e8d3 #700009
+#client.focused 			#151515 #151515 #e8e8d3 #700009
+#client.focused_inactive #2b5b77 #2b5b77 #e8e8d3 #700009
+#client.unfocused 		#384048 #384048 #e8e8d3 #700009
+#
+# New TomorrowEighties colors!
+# class					border  backgr. text 	indicator
+client.focused 			#515151 #515151 #cccccc #700009
+client.focused_inactive #999999 #999999 #cccccc #700009
+client.unfocused 		#393939 #393939 #cccccc #700009
 
 # Startup Apps
 exec --no-startup-id urxvt
 #exec --no-startup-id i3-msg 'exec firefox'
-exec --no-startup-id i3-msg 'workspace 4; exec firefox; workspace 5; exec thunderbird; workspace 1'
+exec --no-startup-id i3-msg 'workspace 6; exec firefox; workspace 7; exec thunderbird; workspace 1'
 
 
 
@@ -243,8 +253,8 @@ bindsym $mod+minus scratchpad show
 
 
 # Binding clients to specific workspaces
-assign [class="Firefox"] 4
-assign [class="Thunderbird"] 5
+assign [class="Firefox"] 6
+assign [class="Thunderbird"] 7
 assign [class="Deluge"] 8
 assign [class="Skype"] 9
 assign [class="Vlc"] 9

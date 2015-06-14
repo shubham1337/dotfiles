@@ -20,7 +20,7 @@
 'h
 	/home/shubham
 	../
-1428694107
+1433993870
 'm
 	/home/shubham/mookit_work
 	../
@@ -48,33 +48,6 @@ l2
 r2
 
 # Left window history (oldest to newest):
-d/home/shubham/myhome/Users/rsharmaindia/eBooks
-	Self-Improvement/
-4
-d/home/shubham/myhome/Users/rsharmaindia
-	eBooks/
-30
-d/home/shubham/myhome/Users
-	rsharmaindia/
-8
-d/home/shubham/myhome
-	Users/
-23
-d/home/shubham
-	myhome/
-14
-d/home
-	shubham/
-1
-d/home/shubham
-	.vifm/
-13
-d/home/shubham/.vifm
-	vifmrc
-5
-d/home/shubham
-	.vifm/
-13
 d/home
 	shubham/
 1
@@ -347,7 +320,34 @@ d/home/shubham
 5
 d/home/shubham/Mixes
 	Keys N Krates - All The Time (Tove Lo Flip)-qn9AeUK-jG4.m4a
+4
+d/home/shubham
+	eBooks/
+12
+d/home/shubham/eBooks
+	SedChart.pdf
 3
+d/home/shubham
+	Downloads/
+3
+d/home/shubham/Downloads
+	Mind1/
+5
+d/home/shubham/Downloads/Mind1
+	Mind Is Your Business.pdf
+3
+d/home/shubham/Downloads
+	Body1/
+2
+d/home/shubham/Downloads/Body1
+	../
+0
+d/home/shubham/Downloads
+	../
+0
+d/home/shubham/myhome/Users/rsharmaindia/Documents/IC-2K13-72
+	IIPSh-Report-without-screenshots.docx
+6
 d
 
 # Right window history (oldest to newest):
@@ -649,8 +649,8 @@ D/home
 	shubham/
 1
 D/home/shubham
-	temp/
-19
+	VirtualBox VMs/
+4
 D
 
 # Command line history (oldest to newest):
@@ -680,13 +680,8 @@ D
 :!vim
 :view
 :!evince %f
-:colorscheme Default
 :colorscheme solarized-dark
-:colorscheme desert
-:colorscheme matrix
-:colorscheme my_theme
 :colorscheme mytheme
-:colorscheme zenburn
 :color my_theme
 :color mytheme
 :colors $LS_COLORS
@@ -701,6 +696,11 @@ D
 :!patool extract Mind
 :!mkdir Mixes
 :!shnw
+:colorscheme Default
+:colorscheme desert
+:colorscheme matrix
+:colorscheme my_theme
+:colorscheme zenburn
 :q
 
 # Search history (oldest to newest):
@@ -729,6 +729,8 @@ D
 /conk
 /temp
 /ci
+/ebo
+/dow
 
 # Prompt history (oldest to newest):
 pO
@@ -739,7 +741,6 @@ pindex_form_downloads.html
 # Local filter history (oldest to newest):
 
 # Registers:
-""/home/shubham/Downloads/Citizenfour.2014.HDRiP.avi
 
 # Directory stack (oldest to newest):
 

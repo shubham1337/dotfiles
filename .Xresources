@@ -18,7 +18,7 @@ URxvt*scrollBar:                      false
 ! URxvt*inheritPixmap:                  boolean
 URxvt*transparent:                    true
 !URxvt*tintColor:                      black
-URxvt*shading:                        30
+URxvt*shading:                        50
 ! URxvt*blurRadius:                     HxV
 ! URxvt*fading:                         number
 ! URxvt*fadeColor:                      color
@@ -67,7 +67,8 @@ URxvt*cursorBlink:                    true
 ! URxvt*pointerColor2:                  color
 ! URxvt*borderColor:                    color
 ! URxvt*iconFile:                       file
-URxvt*font: xft:DejaVu Sans Mono Book
+!URxvt*font: xft:DejaVu Sans Mono Book:antialias=true
+URxvt*font: xft:Droid Sans Mono:antialias=true
 !URxvt*font:                           xft:Consolas:size=10
 ! URxvt*boldFont:                       fontname
 ! URxvt*italicFont:                     fontname
@@ -81,7 +82,7 @@ URxvt*font: xft:DejaVu Sans Mono Book
 ! URxvt*iconName:                       string
 ! URxvt*saveLines:                      number
 ! URxvt*buffered:                       boolean
-URxvt*depth:                          32
+URxvt*depth:                            32
 ! URxvt*visual:                         number
 ! URxvt*transient-for:                  windowid
 ! URxvt*override-redirect:              boolean
@@ -90,7 +91,8 @@ URxvt*depth:                          32
 ! URxvt*internalBorder:                 number
 ! URxvt*borderLess:                     boolean
 ! URxvt*lineSpace:                      number
-URxvt*letterSpace:                    -6
+!URxvt*letterSpace:                    -6
+URxvt*letterSpace:                      0
 ! URxvt*skipBuiltinGlyphs:              boolean
 ! URxvt*pointerBlankDelay:              number
 ! URxvt*backspacekey:                   string
@@ -153,59 +155,111 @@ URxvt*letterSpace:                    -6
 !!cyan      #2aa198  6/6 cyan      37 #00afaf 60 -35 -05  42 161 152 175  74  63
 !!green     #859900  2/2 green     64 #5f8700 60 -20  65 133 153   0  68 100  60
 
-#define S_base03        #151515
-#define S_base02        #151515
-#define S_base01        #384048
-#define S_base00        #adadad
-#define S_base0         #384048
-#define S_base1         #e8e8d3
-#define S_base2         #e8e8d3
-#define S_base3         #fdf6e3
-#define S_yellow        #d8ad4c
-#define S_orange        #ffb964
-#define S_red           #cf6a4c
-#define S_magenta       #a037b0
-#define S_violet        #c6b6ee
-#define S_blue          #597bc5
-#define S_cyan          #71b9f8
-#define S_green         #99ad6a
+!#define S_base03        #151515
+!#define S_base02        #b9b9b9
+!#define S_base01        #384048
+!#define S_base00        #adadad
+!#define S_base0         #384048
+!#define S_base1         #e8e8d3
+!#define S_base2         #e8e8d3
+!#define S_base3         #fdf6e3
+!#define S_yellow        #d8ad4c
+!#define S_orange        #ffb964
+!#define S_red           #cf6a4c
+!#define S_magenta       #a037b0
+!#define S_violet        #c6b6ee
+!#define S_blue          #597bc5
+!#define S_cyan          #71b9f8
+!#define S_green         #99ad6a
 
-*background:            S_base03
-*foreground:            S_base00
-*fading:                40
-*fadeColor:             S_base03
-*cursorColor:           S_base1
-*pointerColorBackground:S_base01
-*pointerColorForeground:S_base1
+!*background:            S_base03
+!*foreground:            S_base00
+!*fading:                40
+!*fadeColor:             S_base03
+!*cursorColor:           S_base1
+!*pointerColorBackground:S_base01
+!*pointerColorForeground:S_base1
 
-!! black dark/light
-*color0:                S_base02
-*color8:                S_base03
+!!! black dark/light
+!*color0:                S_base02
+!*color8:                S_base03
 
-!! red dark/light
-*color1:                S_red
-*color9:                S_orange
+!!! red dark/light
+!*color1:                S_red
+!*color9:                S_orange
 
-!! green dark/light
-*color2:                S_green
-*color10:               S_base01
+!!! green dark/light
+!*color2:                S_green
+!*color10:               S_base01
 
-!! yellow dark/light
-*color3:                S_yellow
-*color11:               S_base00
+!!! yellow dark/light
+!*color3:                S_yellow
+!*color11:               S_base00
 
-!! blue dark/light
-*color4:                S_blue
-*color12:               S_base0
+!!! blue dark/light
+!*color4:                S_blue
+!*color12:               S_base0
 
-!! magenta dark/light
-*color5:                S_magenta
-*color13:               S_violet
+!!! magenta dark/light
+!*color5:                S_magenta
+!*color13:               S_violet
 
-!! cyan dark/light
-*color6:                S_cyan
-*color14:               S_base1
+!!! cyan dark/light
+!*color6:                S_cyan
+!*color14:               S_base1
 
-!! white dark/light
-*color7:                S_base2
-*color15:               S_base3
+!!! white dark/light
+!*color7:                S_base2
+!*color15:               S_base3
+
+
+!TomorrowNightEighties
+#define t_background        #2d2d2d
+#define t_current_line      #393939
+#define t_selection      	#515151
+#define t_foreground      	#cccccc
+#define t_comment	     	#999999
+#define t_red		     	#f2777a
+#define t_orange	     	#f99157
+#define t_yellow        	#ffcc66
+#define t_green	        	#99cc99
+#define t_aqua	        	#66cccc
+#define t_blue	        	#6699cc
+#define t_purple        	#cc99cc
+
+
+*.foreground:   t_foreground
+*.background:   t_background
+*.cursorColor:  #aeafad
+
+! Black / Grey
+*.color0:       #000000
+*.color8:       #666666
+
+! Red / Bright Red
+*.color1:       t_red
+*.color9:       #FF3334
+
+! Green + Bright Green
+*.color2:       t_green
+*.color10:      #9ec400
+
+! Yellow (Orange) + Bright Yellow (Yellow)
+*.color3:       t_orange
+*.color11:      t_yellow
+
+! Blue + Bright Blue
+*.color4:       t_blue
+*.color12:      t_blue
+
+! Magenta (Purple) + Bright Magenta
+*.color5:       t_purple
+*.color13:      #b777e0
+
+! Cyan (Aqua) + Bright Cyan
+*.color6:       t_aqua
+*.color14:      #54ced6
+
+! Light Grey (Selection) + White (Current Line)
+*.color7:       t_selection
+*.color15:      t_current_line

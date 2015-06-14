@@ -42,34 +42,33 @@ TEXT
 },
 {
 	"full_text" : "Down: ${downspeedf wlo1} KB/s",
-	"color" : ${if_match ${downspeedf wlo1}<64}"\#71b9f8"${else}"\#cf6a4c"${endif} 
+	"color" : ${if_match ${downspeedf wlo1}<64}"\#6699cc"${else}"\#f2777a"${endif} 
 },
 {
 	"full_text" : "CPU: ${cpu}%",
-	"color" : ${if_match ${cpu}<50}"\#99ad6a"${else}"\#cf6a4c"${endif} 
+	"color" : ${if_match ${cpu}<50}"\#6699cc"${else}"\#f2777a"${endif} 
 },
 {
 	"full_text" : "BAT0: ${battery_short}",
-	"color" : ${if_match ${battery_percent}>20}"\#99ad6a"${else}"\#cf6a4c"${endif} 
+	"color" : ${if_match ${battery_percent}>20}"\#99cc99"${else}"\#f2777a"${endif} 
 },
-{
-	"full_text" : "eno1: ${addr eno1}",
-	"color" : ${if_match ${addr eno1}=="No Address"}"\#597bc5"${else}"\#cf6a4c"${endif} 
-},
+#{
+	#"full_text" : "eno1: ${addr eno1}",
+	#"color" : ${if_match ${addr eno1}=="No Address"}"\#f99157"${else}"\#66cccc"${endif} 
+#},
 {
 	"full_text" : "wlo1: ${addr wlo1}",
-	"color" : ${if_match ${addr wlo1}=="No Address"}"\#597bc5"${else}"\#cf6a4c"${endif} 
+	"color" : ${if_match ${addr wlo1}=="No Address"}"\#f99157"${else}"\#66cccc"${endif} 
 },
 {
 	"full_text" : "Temp: ${acpitemp}",
-	"color" : ${if_match ${acpitemp}<65}"\#597bc5"${else}"\#cf6a4c"${endif} 
+	"color" : ${if_match ${acpitemp}<65}"\#99cc99"${else}"\#f2777a"${endif} 
 },
 { 
 	"full_text" : "RAM ${memperc}%" , 
-	"color" : ${if_match ${memperc}<50}"\#99ad6a"${else}"\#cf6a4c"${endif} 
+	"color" : ${if_match ${memperc}<50}"\#66cccc"${else}"\#f2777a"${endif} 
 },
 {
 	"full_text" : "${time} ",
-	"color" : "\#ffb964" 
-}
-],
+	"color" : "\#cc99cc" 
+}],
